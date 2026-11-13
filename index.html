@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWD392 — Sổ Tay Ôn Tập Thực Hành (PE)</title>
+  <link rel="stylesheet" href="FA26_On_Tap/style.css">
+</head>
+<body>
+
+  <div class="page-shell">
+
+    <!-- TOP MINIMAL HEADER BAR -->
+    <header class="top-header">
+      <div class="brand-group">
+        <div class="brand-monogram" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 29V7L18 22L31 7V29" stroke="#88f724" stroke-width="3.2" stroke-linejoin="round"/>
+            <path d="M10 29V15L18 24L26 15V29" stroke="#111312" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-divider"></div>
+        <span class="brand-label">SOFTWARE ARCHITECTURE &amp; DESIGN</span>
+      </div>
+
+      <div class="header-right no-print">
+        <nav class="quick-nav">
+          <a href="#sec-overview" class="nav-pill active">Trọng tâm</a>
+          <a href="#sec-diagrams" class="nav-pill">6 Loại Diagram</a>
+          <a href="#sec-patterns" class="nav-pill">4 Design Pattern</a>
+          <a href="#sec-rules" class="nav-pill">Nội quy PEA</a>
+          <a href="#sec-checklist" class="nav-pill">Lộ trình 2 ngày</a>
+          <a href="#sec-flashcards" class="nav-pill">Tự kiểm tra</a>
+        </nav>
+        <div class="status-tag">
+          <span>2026 PRACTICAL EXAM</span>
+          <span class="lime-dot"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION (MATCHING REFERENCE PORTFOLIO LAYOUT) -->
+    <section class="hero-section">
+      <div class="hero-left">
+        <h1 class="hero-title">
+          SWD392
+          <span class="lime-word">PRACTICAL.</span>
+        </h1>
+        <p class="hero-subtitle">
+          TÀI LIỆU ÔN TẬP CÔ ĐỌNG TỪ <span class="highlight-lime">10 ĐỀ THI THẬT</span>,
+          BÁM SÁT QUY CHUẨN <span class="highlight-lime">UML 2.5</span> VÀ QUY CHẾ PHÒNG THI PEA.
+        </p>
+
+        <div class="hero-meta-row">
+          <div class="hero-meta-cell">
+            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3.6 9h16.8M3.6 15h16.8M12 3a14.5 14.5 0 0 0 0 18M12 3a14.5 14.5 0 0 1 0 18"/>
+            </svg>
+            <div class="meta-text">
+              <span>PHẠM VI ÔN TẬP</span>
+              10 ĐỀ THI THẬT
+            </div>
+          </div>
+          <div class="hero-meta-cell">
+            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M22 2L11 13"/>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+            </svg>
+            <div class="meta-text">
+              <span>CHUẨN KÝ HIỆU</span>
+              UML 2.5 &amp; DRAW.IO
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO RIGHT: HALO RING + LIVE EXAM TIMER + FLOATING GLASS CARD -->
+      <div class="hero-visual">
+        <div class="halo-ring">
+          <span class="halo-badge-top">ĐỒNG HỒ LUYỆN ĐỀ BẤM GIỜ</span>
+          <div class="timer-readout" id="timerDisplay">90:00</div>
+          <div class="timer-controls no-print">
+            <button class="btn-chip primary" id="timerStartBtn" onclick="toggleTimer()">Bắt đầu</button>
+            <button class="btn-chip" onclick="resetTimer(90)">90 Phút</button>
+            <button class="btn-chip" onclick="resetTimer(60)">60 Phút</button>
+          </div>
+        </div>
+
+        <div class="floating-glass-card">
+          <div class="mini-label">CHẾ ĐỘ TÀI LIỆU</div>
+          <div class="lime-title">OFFLINE READY</div>
+          <div class="mini-foot">
+            <span>WORD &amp; DRAW.IO</span>
+            <span class="lime-dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN WHITE SHEET CONTAINER -->
+    <main class="sheet-container">
+
+      <!-- SEARCH & PROGRESS STRIP -->
+      <div class="toolbar-strip no-print">
+        <input type="text" id="searchInput" class="search-field" placeholder="Nhập từ khóa để lọc nhanh nội dung (ví dụ: Strategy, Realization, ERD Chen, Sequence, PEA)...">
+        <div class="progress-inline">
+          <span>TIẾN ĐỘ 2 NGÀY</span>
+          <div class="progress-track-mini">
+            <div class="progress-fill-mini" id="progressBar"></div>
+          </div>
+          <span id="progressPercent">0%</span>
+        </div>
+      </div>
+
+      <!-- SECTION 1: 4 TRỤ CỘT ĐIỂM SỐ ("WHAT I DO" 4-CARD BENTO STYLE) -->
+      <div id="sec-overview" class="searchable-block">
+        <div class="section-bar">
+          <div class="section-bar-left">
+            <span class="lime-dot"></span>
+            <h2 class="section-title">CẤU TRÚC ĐỀ THI</h2>
+          </div>
+          <div class="section-bar-right">
+            <span>PHÂN TÍCH TỪ SU25, FALL25, SP26, SU26, FA26</span>
+          </div>
+        </div>
+
+        <div class="bento-4">
+          <!-- Card 01 -->
+          <article class="feature-card">
+            <div>
+              <div class="feature-card-top">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="3" width="7" height="7" rx="1"/>
+                  <rect x="14" y="3" width="7" height="7" rx="1"/>
+                  <rect x="8.5" y="14" width="7" height="7" rx="1"/>
+                  <path d="M6.5 10v2.5h11V10M12 12.5V14"/>
+                </svg>
+                <span class="feature-num">01</span>
+              </div>
+              <h3 class="feature-name">CLASS DIAGRAM</h3>
+              <p class="feature-desc">Xuất hiện ở 10/10 đề thi. Trọng tâm gồm 5-6 lớp thực thể chính, đầy đủ visibility (-/+), multiplicity và đúng 6 loại mũi tên chuẩn UML 2.5.</p>
+            </div>
+            <div class="feature-foot">
+              <span>2.5 - 4.0 ĐIỂM</span>
+              <span>100% ĐỀ RA</span>
+            </div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="feature-card">
+            <div>
+              <div class="feature-card-top">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 5h4v4H4zM10 5h4v4h-4zM16 5h4v4h-4z"/>
+                  <path d="M6 9v11M12 9v11M18 9v11"/>
+                  <path d="M6 13h6M12 16h6"/>
+                </svg>
+                <span class="feature-num">02</span>
+              </div>
+              <h3 class="feature-name">SEQUENCE DIAGRAM</h3>
+              <p class="feature-desc">Xuất hiện ở 9/10 đề thi. Mô tả luồng nghiệp vụ từ Actor qua UI, Controller, Service, Gateway/DB kèm khung alt [Success/Failure] và reply nét đứt.</p>
+            </div>
+            <div class="feature-foot">
+              <span>2.5 - 4.0 ĐIỂM</span>
+              <span>90% ĐỀ RA</span>
+            </div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="feature-card">
+            <div>
+              <div class="feature-card-top">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="6" cy="6" r="2.5"/>
+                  <rect x="13" y="3.5" width="8" height="5" rx="2"/>
+                  <rect x="3" y="15.5" width="8" height="5" rx="2"/>
+                  <circle cx="18" cy="18" r="2.5"/>
+                  <path d="M8.5 6H13M17 8.5v4l-6 3M11 18h4.5"/>
+                </svg>
+                <span class="feature-num">03</span>
+              </div>
+              <h3 class="feature-name">STATE &amp; ACTIVITY</h3>
+              <p class="feature-desc">State Machine (50% đề) vẽ vòng đời 1 đối tượng (Trip, Appointment); Activity Swimlanes (40% đề) vẽ luồng liên phòng ban có Fork/Join.</p>
+            </div>
+            <div class="feature-foot">
+              <span>2.0 - 2.5 ĐIỂM</span>
+              <span>RẤT HAY RA</span>
+            </div>
+          </article>
+
+          <!-- Card 04 -->
+          <article class="feature-card">
+            <div>
+              <div class="feature-card-top">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+                <span class="feature-num">04</span>
+              </div>
+              <h3 class="feature-name">PATTERN, ERD &amp; UC</h3>
+              <p class="feature-desc">4 mẫu Design Pattern (Strategy, Observer, Singleton, Factory Method), ERD (Chen vs Crow's Foot) và Use Case Diagram kèm đặc tả.</p>
+            </div>
+            <div class="feature-foot">
+              <span>2.0 - 5.0 ĐIỂM</span>
+              <span>PHÂN LOẠI ĐIỂM 9-10</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- SECTION 2: 3 SHOWCASE CARDS ("SELECTED WORK" STYLE FROM REFERENCE) -->
+      <div id="sec-patterns" class="searchable-block">
+        <div class="section-bar">
+          <div class="section-bar-left">
+            <span class="lime-dot"></span>
+            <h2 class="section-title">BỘ TEMPLATE &amp; MẪU THIẾT KẾ TRỌNG TÂM</h2>
+          </div>
+          <div class="section-bar-right">
+            <a href="FA26_On_Tap/Templates_Hinh_Ve/00_SWD392_PE_ALL_IN_ONE_TEMPLATES.drawio" style="color:inherit;text-decoration:none;">MỞ FILE 00_ALL_IN_ONE.DRAWIO</a>
+          </div>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Showcase 01: Light Preview -->
+          <div class="showcase-card">
+            <div class="showcase-preview light-mode">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                <span class="badge-pill badge-lime">UML 2.5 CLASS</span>
+                <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-muted);">6 QUAN HỆ CHUẨN</span>
+              </div>
+              <svg viewBox="0 0 320 120" width="100%" height="120" font-family="Consolas, monospace" font-size="10">
+                <rect x="6" y="12" width="105" height="44" rx="4" fill="#fff" stroke="#111312" stroke-width="1.4"/>
+                <text x="16" y="28" font-weight="bold">MedicalRecord</text>
+                <line x1="6" y1="34" x2="111" y2="34" stroke="#111312"/>
+                <text x="12" y="48">- recordId: String</text>
+
+                <polygon points="111,34 121,28 131,34 121,40" fill="#111312"/>
+                <line x1="131" y1="34" x2="195" y2="34" stroke="#111312" stroke-width="1.4"/>
+                <text x="135" y="27">1</text>
+                <text x="172" y="27">0..*</text>
+
+                <rect x="195" y="12" width="115" height="44" rx="4" fill="#fff" stroke="#111312" stroke-width="1.4"/>
+                <text x="210" y="28" font-weight="bold">Prescription</text>
+                <line x1="195" y1="34" x2="310" y2="34" stroke="#111312"/>
+                <text x="202" y="48">- dosage: String</text>
+
+                <text x="8" y="86" fill="#373c39">Thoi ĐẶC (Composition): Xóa A mất B</text>
+                <text x="8" y="104" fill="#56b800" font-weight="bold">Thoi RỖNG (Aggregation): Xóa A còn B</text>
+              </svg>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-num">01</span>
+              <div>
+                <h3 class="showcase-title">DOMAIN CLASS &amp; MULTIPLICITY</h3>
+                <p class="showcase-sub">Hình thoi luôn đặt ở phía Whole (lớp chứa). Luôn ghi rõ 1, 0..1, 0..*, 1..* ở hai đầu dây.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Showcase 02: Dark High-Contrast Preview with Glowing Lime Orb (Exact Match to Reference Center Card) -->
+          <div class="showcase-card">
+            <div class="showcase-preview dark-mode">
+              <div class="dark-orb"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="badge-pill badge-dark" style="border:1px solid #333;">4 DESIGN PATTERNS</span>
+                <span style="font-size:10.5px;color:#9ba29d;font-family:var(--font-mono);">GOF PATTERNS</span>
+              </div>
+              <div style="my:auto;z-index:1;">
+                <div style="font-size:17px;font-weight:800;line-height:1.25;margin:12px 0 8px;">
+                  Strategy, Observer,<br>
+                  <span style="color:var(--lime-neon);">Singleton &amp; Factory.</span>
+                </div>
+                <p style="font-size:11.5px;color:#b5bcb7;max-width:220px;">
+                  Realization bắt buộc vẽ bằng NÉT ĐỨT + tam giác rỗng trỏ vào &lt;&lt;interface&gt;&gt;.
+                </p>
+              </div>
+              <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--lime-neon);z-index:1;">
+                - instance: Singleton [static]
+              </div>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-num">02</span>
+              <div>
+                <h3 class="showcase-title">4 MẪU DESIGN PATTERN TRONG ĐỀ</h3>
+                <p class="showcase-sub">Đổi thuật toán: Strategy | Đa kênh thông báo: Observer | 1 phiên bản: Singleton | Tạo đối tượng: Factory.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Showcase 03: Dual-Screen Preview (Exact Match to Reference Right Card) -->
+          <div class="showcase-card">
+            <div class="showcase-preview light-mode">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;height:100%;">
+                <div style="background:#fff;border:1px solid var(--border-subtle);border-radius:8px;padding:10px;">
+                  <div style="font-size:10px;font-weight:800;color:var(--ink-muted);">CHEN'S ERD</div>
+                  <div style="font-size:12px;font-weight:900;color:var(--ink-black);margin:4px 0;">Conceptual</div>
+                  <div style="font-size:11px;color:var(--danger-text);font-weight:700;margin-top:6px;">KHÔNG FK<br>KHÔNG KIỂU DL</div>
+                  <div style="font-size:10.5px;color:var(--ink-muted);margin-top:6px;">Thoi + Elip + Chữ nhật</div>
+                </div>
+                <div style="background:#fff;border:1px solid var(--border-subtle);border-radius:8px;padding:10px;">
+                  <div style="font-size:10px;font-weight:800;color:var(--ink-muted);">CROW'S FOOT</div>
+                  <div style="font-size:12px;font-weight:900;color:var(--ink-black);margin:4px 0;">Logical ERD</div>
+                  <div style="font-size:11px;color:var(--lime-text);font-weight:800;margin-top:6px;">CÓ PK &amp; FK<br>TÁCH BẢNG N-N</div>
+                  <div style="font-size:10.5px;color:var(--ink-muted);margin-top:6px;">Ký hiệu || và o&lt;</div>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-num">03</span>
+              <div>
+                <h3 class="showcase-title">PHÂN BIỆT 2 LOẠI ERD &amp; USE CASE</h3>
+                <p class="showcase-sub">Đọc kỹ đề yêu cầu Chen's Notation hay Crow's Foot để tránh vẽ nhầm mất 100% điểm câu ERD.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: METRICS STRIP ("28+ / 14+ / 99% / 5+" STYLE FROM REFERENCE) -->
+      <div class="metrics-strip searchable-block">
+        <div class="metric-item">
+          <div class="metric-value">10/10</div>
+          <div class="metric-label">ĐỀ THI CÓ<br>CLASS DIAGRAM</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">9/10</div>
+          <div class="metric-label">ĐỀ THI CÓ<br>SEQUENCE DIAGRAM</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">5/10</div>
+          <div class="metric-label">ĐỀ THI CÓ<br>STATE MACHINE</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">04</div>
+          <div class="metric-label">MẪU DESIGN PATTERN<br>DUY NHẤT TRONG ĐỀ</div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: INTERACTIVE DEEP-DIVE MODULES (ALL 6 DIAGRAMS, 4 PATTERNS, 10 EXAMS, WRITTEN TEMPLATES) -->
+      <div id="sec-diagrams" class="searchable-block">
+        <div class="section-bar">
+          <div class="section-bar-left">
+            <span class="lime-dot"></span>
+            <h2 class="section-title">CHI TIẾT CÁCH VẼ &amp; KHUNG TRẢ LỜI THEO TỪNG CÂU</h2>
+          </div>
+          <div class="section-bar-right">
+            <span>CHỌN TỪNG MỤC ĐỂ XEM SƠ ĐỒ CHUẨN</span>
+          </div>
+        </div>
+
+        <div class="module-tabs no-print">
+          <button class="module-tab-btn active" onclick="switchModule('mod-class', this)">01. Class Diagram</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-seq', this)">02. Sequence Diagram</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-state', this)">03. State &amp; Activity</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-erd', this)">04. ERD &amp; Use Case</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-pattern', this)">05. 4 Design Patterns</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-writing', this)">06. Khung Câu Viết</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-exams', this)">07. Bảng 10 Đề Thật &amp; 15 Lỗi</button>
+        </div>
+
+        <!-- MODULE 01: CLASS DIAGRAM -->
+        <div id="mod-class" class="module-panel active">
+          <h3>01. Hướng dẫn vẽ Class Diagram (Xuất hiện 10/10 đề - 2.5 đến 4.0 điểm)</h3>
+          <p>File mẫu mở trong Draw.io Desktop: <a href="FA26_On_Tap/Templates_Hinh_Ve/01_Template_Class_Diagram_PE.drawio"><code>01_Template_Class_Diagram_PE.drawio</code></a></p>
+
+          <div class="svg-board">
+            <svg viewBox="0 0 860 225" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="12">
+              <text x="15" y="28" font-weight="bold">1. Inheritance (Kế thừa: A là 1 loại B)</text>
+              <line x1="330" y1="24" x2="475" y2="24" stroke="#111" stroke-width="1.8"/>
+              <polygon points="490,24 475,17 475,31" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <text x="510" y="28">Nét liền + Tam giác rỗng (Trỏ vào lớp Cha)</text>
+
+              <text x="15" y="64" font-weight="bold">2. Realization (Implement Interface)</text>
+              <line x1="330" y1="60" x2="475" y2="60" stroke="#111" stroke-width="1.8" stroke-dasharray="6,4"/>
+              <polygon points="490,60 475,53 475,67" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <text x="510" y="64">Nét đứt + Tam giác rỗng (Trỏ vào Interface)</text>
+
+              <text x="15" y="100" font-weight="bold">3. Composition (Chứa chặt: Xóa A mất B)</text>
+              <polygon points="330,96 342,89 354,96 342,103" fill="#111" stroke="#111" stroke-width="1.5"/>
+              <line x1="354" y1="96" x2="490" y2="96" stroke="#111" stroke-width="1.8"/>
+              <text x="360" y="90">1</text>
+              <text x="460" y="90">1..*</text>
+              <text x="510" y="100">Hình thoi ĐẶC đặt ở phía Whole (Lớp chứa)</text>
+
+              <text x="15" y="136" font-weight="bold">4. Aggregation (Chứa lỏng: Xóa A còn B)</text>
+              <polygon points="330,132 342,125 354,132 342,139" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <line x1="354" y1="132" x2="490" y2="132" stroke="#111" stroke-width="1.8"/>
+              <text x="360" y="126">1</text>
+              <text x="460" y="126">0..*</text>
+              <text x="510" y="136">Hình thoi RỖNG đặt ở phía Whole (Lớp chứa)</text>
+
+              <text x="15" y="172" font-weight="bold">5. Association (Liên kết thực thể)</text>
+              <line x1="330" y1="168" x2="490" y2="168" stroke="#111" stroke-width="1.8"/>
+              <polyline points="478,161 490,168 478,175" fill="none" stroke="#111" stroke-width="1.8"/>
+              <text x="340" y="162">1</text>
+              <text x="455" y="162">0..*</text>
+              <text x="510" y="172">Nét liền + bắt buộc ghi Multiplicity ở 2 đầu</text>
+
+              <text x="15" y="208" font-weight="bold">6. Dependency (Tham số hàm tạm thời)</text>
+              <line x1="330" y1="204" x2="490" y2="204" stroke="#111" stroke-width="1.8" stroke-dasharray="6,4"/>
+              <polyline points="478,197 490,204 478,211" fill="none" stroke="#111" stroke-width="1.8"/>
+              <text x="510" y="208">Nét đứt + Mũi tên hở (Controller dùng DTO)</text>
+            </svg>
+          </div>
+
+          <h4>Quy tắc 5 bước ăn trọn điểm Class Diagram</h4>
+          <ol style="margin-left:20px;">
+            <li>Mỗi Class phải chia đúng 3 ngăn: Tên Class, ngăn Attributes có dấu <code>-</code> (private) kèm kiểu dữ liệu (<code>String</code>, <code>Double</code>, <code>DateTime</code>, <code>Boolean</code>), và ngăn Methods có dấu <code>+</code> (public) kèm kiểu trả về.</li>
+            <li>Nếu 2 lớp có chung tập thuộc tính (như <code>Passenger</code> và <code>Driver</code> cùng có <code>id, fullName, phone</code>), tạo lớp cha <code>User</code> và nối mũi tên Inheritance (nét liền + tam giác rỗng) trỏ lên <code>User</code>.</li>
+            <li>Phân biệt rõ <strong>Composition (thoi đặc)</strong> cho các phần tử phụ thuộc sống còn (<code>Order *-- OrderItem</code>, <code>MedicalRecord *-- Prescription</code>) và <strong>Aggregation (thoi rỗng)</strong> cho các phần tử độc lập (<code>Department o-- Doctor</code>, <code>Course o-- Lesson</code>).</li>
+            <li>Kiểm tra 100% các đường nối phải có con số Multiplicity (<code>1</code>, <code>0..1</code>, <code>0..*</code>, <code>1..*</code>) ở cả 2 đầu dây.</li>
+          </ol>
+        </div>
+
+        <!-- MODULE 02: SEQUENCE DIAGRAM -->
+        <div id="mod-seq" class="module-panel">
+          <h3>02. Hướng dẫn vẽ Sequence Diagram (Xuất hiện 9/10 đề - 2.5 đến 4.0 điểm)</h3>
+          <p>File mẫu mở trong Draw.io Desktop: <a href="FA26_On_Tap/Templates_Hinh_Ve/02_Template_Sequence_Diagram_PE.drawio"><code>02_Template_Sequence_Diagram_PE.drawio</code></a></p>
+
+          <div class="svg-board">
+            <svg viewBox="0 0 880 330" width="100%" height="330" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
+              <rect x="5" y="5" width="870" height="320" fill="none" stroke="#111" stroke-width="1.5"/>
+              <polygon points="5,5 170,5 170,20 160,28 5,28" fill="#e9f0ea" stroke="#111" stroke-width="1.2"/>
+              <text x="12" y="21" font-weight="bold">sd Book And Pay Trip</text>
+
+              <rect x="30" y="40" width="90" height="30" fill="#fff" stroke="#111"/>
+              <text x="42" y="59" font-weight="bold">:Passenger</text>
+              <line x1="75" y1="70" x2="75" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+
+              <rect x="175" y="40" width="100" height="30" fill="#fff" stroke="#111"/>
+              <text x="190" y="59" font-weight="bold">:BookingUI</text>
+              <line x1="225" y1="70" x2="225" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+
+              <rect x="330" y="40" width="130" height="30" fill="#fff" stroke="#111"/>
+              <text x="340" y="59" font-weight="bold">:TripController</text>
+              <line x1="395" y1="70" x2="395" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+
+              <rect x="510" y="40" width="120" height="30" fill="#fff" stroke="#111"/>
+              <text x="525" y="59" font-weight="bold">:TripService</text>
+              <line x1="570" y1="70" x2="570" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+
+              <rect x="680" y="40" width="140" height="30" fill="#fff" stroke="#111"/>
+              <text x="692" y="59" font-weight="bold">:PaymentGateway</text>
+              <line x1="750" y1="70" x2="750" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+
+              <line x1="75" y1="92" x2="225" y2="92" stroke="#111" stroke-width="1.5"/>
+              <polygon points="225,92 216,87 216,97" fill="#111"/>
+              <text x="85" y="86">1: clickBookTrip(req)</text>
+
+              <line x1="225" y1="116" x2="395" y2="116" stroke="#111" stroke-width="1.5"/>
+              <polygon points="395,116 386,111 386,121" fill="#111"/>
+              <text x="235" y="110">1.1: POST /trips(dto)</text>
+
+              <line x1="395" y1="140" x2="570" y2="140" stroke="#111" stroke-width="1.5"/>
+              <polygon points="570,140 561,135 561,145" fill="#111"/>
+              <text x="405" y="134">1.1.1: createAndPay(dto)</text>
+
+              <line x1="570" y1="164" x2="750" y2="164" stroke="#111" stroke-width="1.5"/>
+              <polygon points="750,164 741,159 741,169" fill="#111"/>
+              <text x="580" y="158">1.1.1.1: charge(amount)</text>
+
+              <rect x="155" y="182" width="675" height="122" fill="none" stroke="#111" stroke-width="1.3"/>
+              <polygon points="155,182 200,182 200,196 192,202 155,202" fill="#e9f0ea" stroke="#111"/>
+              <text x="162" y="196" font-weight="bold">alt</text>
+              <text x="215" y="197" font-weight="bold">[paymentStatus == SUCCESS]</text>
+
+              <line x1="750" y1="218" x2="570" y2="218" stroke="#111" stroke-width="1.3" stroke-dasharray="5,4"/>
+              <polyline points="579,213 570,218 579,223" fill="none" stroke="#111" stroke-width="1.3"/>
+              <text x="595" y="212">1.1.1.2: return receipt</text>
+
+              <line x1="570" y1="240" x2="225" y2="240" stroke="#111" stroke-width="1.3" stroke-dasharray="5,4"/>
+              <polyline points="234,235 225,240 234,245" fill="none" stroke="#111" stroke-width="1.3"/>
+              <text x="310" y="234">1.1.2: return 200 OK (TripConfirmed)</text>
+
+              <line x1="155" y1="256" x2="830" y2="256" stroke="#111" stroke-dasharray="6,4"/>
+              <text x="215" y="271" font-weight="bold">[else: payment failed]</text>
+
+              <line x1="750" y1="292" x2="225" y2="292" stroke="#111" stroke-width="1.3" stroke-dasharray="5,4"/>
+              <polyline points="234,287 225,292 234,297" fill="none" stroke="#111" stroke-width="1.3"/>
+              <text x="350" y="286">1.1.3: return 402 PaymentFailedError</text>
+            </svg>
+          </div>
+
+          <h4>Các điểm bắt buộc phải có</h4>
+          <ul style="margin-left:20px;">
+            <li>Sắp xếp đúng thứ tự Lifeline từ trái sang phải: <code>Actor &gt; UI/View &gt; Controller &gt; Service &gt; Repository / External Gateway &gt; Database</code>.</li>
+            <li>Đánh số thứ tự phân cấp cho mọi lời gọi: <code>1</code>, <code>1.1</code>, <code>1.1.1</code>, <code>1.1.2</code>.</li>
+            <li>Bắt buộc có khung <code>alt [điều kiện thành công] / [else: điều kiện thất bại]</code> và mũi tên trả về dùng <strong>nét đứt</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- MODULE 03: STATE MACHINE & ACTIVITY -->
+        <div id="mod-state" class="module-panel">
+          <h3>03. State Machine Diagram (50% đề) &amp; Activity Swimlanes (40% đề)</h3>
+          <p>File mẫu: <a href="FA26_On_Tap/Templates_Hinh_Ve/03_Template_Statechart_Diagram_PE.drawio"><code>03_Template_Statechart_Diagram_PE.drawio</code></a> và <a href="FA26_On_Tap/Templates_Hinh_Ve/04_Template_Activity_Diagram_Swimlanes_PE.drawio"><code>04_Template_Activity_Diagram_Swimlanes_PE.drawio</code></a></p>
+
+          <div class="svg-board">
+            <svg viewBox="0 0 860 195" width="100%" height="195" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
+              <circle cx="35" cy="85" r="11" fill="#111"/>
+              <line x1="46" y1="85" x2="105" y2="85" stroke="#111" stroke-width="1.6"/>
+              <polygon points="105,85 96,80 96,90" fill="#111"/>
+              <text x="50" y="75">create()</text>
+
+              <rect x="105" y="60" width="120" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="132" y="89" font-weight="bold">Requested</text>
+
+              <line x1="225" y1="85" x2="345" y2="85" stroke="#111" stroke-width="1.6"/>
+              <polygon points="345,85 336,80 336,90" fill="#111"/>
+              <text x="235" y="66">assignDriver()</text>
+              <text x="235" y="79">[driverFound]</text>
+
+              <rect x="345" y="60" width="120" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="368" y="89" font-weight="bold">Assigned</text>
+
+              <line x1="465" y1="85" x2="575" y2="85" stroke="#111" stroke-width="1.6"/>
+              <polygon points="575,85 566,80 566,90" fill="#111"/>
+              <text x="478" y="78">startTrip()</text>
+
+              <rect x="575" y="60" width="120" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="598" y="89" font-weight="bold">InProgress</text>
+
+              <line x1="695" y1="85" x2="785" y2="45" stroke="#111" stroke-width="1.6"/>
+              <text x="695" y="52">complete() [paid]</text>
+
+              <rect x="740" y="10" width="105" height="40" rx="10" fill="#e9f8db" stroke="#111" stroke-width="1.6"/>
+              <text x="758" y="34" font-weight="bold">Completed</text>
+
+              <rect x="345" y="140" width="120" height="40" rx="10" fill="#fde8e8" stroke="#111" stroke-width="1.6"/>
+              <text x="372" y="164" font-weight="bold">Cancelled</text>
+
+              <line x1="165" y1="110" x2="345" y2="160" stroke="#111" stroke-width="1.4"/>
+              <text x="190" y="152">cancel()</text>
+              <line x1="405" y1="110" x2="405" y2="140" stroke="#111" stroke-width="1.4"/>
+              <text x="412" y="130">cancel()</text>
+
+              <circle cx="815" cy="160" r="12" fill="none" stroke="#111" stroke-width="1.6"/>
+              <circle cx="815" cy="160" r="7" fill="#111"/>
+              <line x1="465" y1="160" x2="803" y2="160" stroke="#111" stroke-width="1.5"/>
+              <line x1="815" y1="50" x2="815" y2="148" stroke="#111" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tiêu chí phân biệt</th>
+                  <th>State Machine Diagram</th>
+                  <th>Activity Diagram (Swimlanes)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Đối tượng mô tả</strong></td>
+                  <td>Vòng đời của <strong>1 thực thể duy nhất</strong> (<code>Trip</code>, <code>Appointment</code>, <code>Registration</code>).</td>
+                  <td>Luồng công việc đi qua <strong>nhiều cột tác nhân</strong> (Customer, System, Payment Gateway).</td>
+                </tr>
+                <tr>
+                  <td><strong>Từ loại trong ô bo góc</strong></td>
+                  <td><strong>Tính từ / Phân từ trạng thái:</strong> <code>Pending</code>, <code>Confirmed</code>, <code>Completed</code>.</td>
+                  <td><strong>Động từ hành động:</strong> <code>Select Item</code>, <code>Validate Stock</code>, <code>Process Payment</code>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- MODULE 04: ERD & USE CASE -->
+        <div id="mod-erd" class="module-panel">
+          <h3>04. ERD (Chen vs Crow's Foot) &amp; Use Case Diagram</h3>
+          <p>File mẫu: <a href="FA26_On_Tap/Templates_Hinh_Ve/05_Template_ERD_Conceptual_And_Logical_PE.drawio"><code>05_Template_ERD_Conceptual_And_Logical_PE.drawio</code></a> và <a href="FA26_On_Tap/Templates_Hinh_Ve/06_Template_UseCase_Diagram_PE.drawio"><code>06_Template_UseCase_Diagram_PE.drawio</code></a></p>
+
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Loại sơ đồ</th>
+                  <th>Ký hiệu bắt buộc</th>
+                  <th>Điều tuyệt đối tránh</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Conceptual ERD (Chen's Notation)</strong><br><em>(Đề Student Management, SmartHome)</em></td>
+                  <td>Hình chữ nhật (Entity), Hình Elip (Attribute, gạch chân PK), Hình thoi (Relationship) ghi <code>1</code>, <code>N</code>, <code>M</code>.</td>
+                  <td><span class="badge-pill badge-danger">CẤM GHI FK &amp; KIỂU DỮ LIỆU</span><br>Không tách bảng trung gian cho quan hệ N-N.</td>
+                </tr>
+                <tr>
+                  <td><strong>Logical ERD (Crow's Foot)</strong><br><em>(Đề Cinema Management)</em></td>
+                  <td>Bảng có ngăn <code>PK</code>, <code>FK</code>; đầu dây chân chim (<code>||</code>, <code>o|</code>, <code>|&lt;</code>, <code>o&lt;</code>).</td>
+                  <td><span class="badge-pill badge-danger">CẤM ĐỂ NGUYÊN QUAN HỆ N-N</span><br>Phải tách N-N thành bảng trung gian có 2 FK.</td>
+                </tr>
+                <tr>
+                  <td><strong>Use Case Diagram</strong><br><em>(Đề Cinema, Food Delivery)</em></td>
+                  <td>Actor ở ngoài khung System Boundary; <code>&lt;&lt;include&gt;&gt;</code> trỏ từ Chính sang Phụ; <code>&lt;&lt;extend&gt;&gt;</code> trỏ từ Phụ về Chính.</td>
+                  <td><span class="badge-pill badge-danger">CẤM GỘP CRUD / MANAGE X</span><br>Phải tách thành các chức năng cụ thể.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- MODULE 05: 4 DESIGN PATTERNS -->
+        <div id="mod-pattern" class="module-panel">
+          <h3>05. Khung 4 Design Pattern xuất hiện trong đề thi</h3>
+          <p>File mẫu mở trong Draw.io Desktop: <a href="FA26_On_Tap/Templates_Hinh_Ve/07_Template_4_Design_Patterns_PE.drawio"><code>07_Template_4_Design_Patterns_PE.drawio</code></a></p>
+
+          <div class="checklist-grid" style="margin-bottom:0;margin-top:14px;">
+            <div>
+              <h4>1. Strategy Pattern (Đổi thuật toán / Thanh toán)</h4>
+              <pre class="code-snippet">[Context: PaymentService]
+  - strategy: IPaymentStrategy
+  + setStrategy(s: IPaymentStrategy): void
+  + executePayment(amount: Double): Boolean
+        | o---&gt; &lt;&lt;interface&gt;&gt; [IPaymentStrategy]
+                      + pay(amount: Double): Boolean
+                             ^ (Nét đứt + tam giác rỗng)
+               +-------------+-------------+
+       [CreditCardStrategy]         [EWalletStrategy]</pre>
+
+              <h4>2. Observer Pattern (Thông báo đa kênh)</h4>
+              <pre class="code-snippet">[Subject: OrderNotifier]
+  - observers: List&lt;IObserver&gt;
+  + attach(o: IObserver): void
+  + notifyAll(msg: String): void
+        | o---&gt; &lt;&lt;interface&gt;&gt; [IObserver]
+                      + update(msg: String): void
+                             ^ (Nét đứt + tam giác rỗng)
+               +-------------+-------------+
+         [EmailNotifier]             [SMSNotifier]</pre>
+            </div>
+
+            <div>
+              <h4>3. Singleton Pattern (1 Instance quản lý duy nhất)</h4>
+              <pre class="code-snippet">[OrderManager]
+-----------------------------------------
+- static instance: OrderManager
+- configData: Map&lt;String, String&gt;
+-----------------------------------------
+- OrderManager()   &lt;-- Constructor PRIVATE (-)
++ static getInstance(): OrderManager</pre>
+
+              <h4>4. Factory Method Pattern (Khởi tạo theo loại)</h4>
+              <pre class="code-snippet">[BouquetFactory]
+  + createBouquet(type: String): IBouquet
+        | (Dependency nét đứt)
+        v
+&lt;&lt;interface&gt;&gt; [IBouquet]
+  + getPrice(): Double
+        ^ (Nét đứt + tam giác rỗng)
+  +-----+------------------+
+[WeddingBouquet]    [BirthdayBouquet]</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 06: KHUNG CÂU VIẾT -->
+        <div id="mod-writing" class="module-panel">
+          <h3>06. Khung trả lời 4 dạng câu hỏi viết trong đề</h3>
+
+          <h4>A. Functional vs Non-Functional Requirements (Đề SU25 Cinema - 1.0đ)</h4>
+          <p><strong>Functional Requirements:</strong> (1) Allow users to search, filter, and view details of items/schedules; (2) Allow users to create bookings/orders with real-time validation; (3) Process payments via integrated gateways and issue receipts; (4) Allow administrators to manage catalog, schedules, and reports.</p>
+          <p><strong>Non-Functional Requirements (Luôn kèm con số đo lường):</strong> (1) <em>Performance:</em> 95% of API responses within <code>2.0 seconds</code>; (2) <em>Concurrency:</em> Support <code>5,000 concurrent users</code> with locking to prevent double-booking; (3) <em>Availability:</em> <code>99.9% uptime</code> with daily backups; (4) <em>Security:</em> Passwords hashed with <code>bcrypt</code>, traffic encrypted via <code>TLS 1.3</code>, RBAC enforced.</p>
+
+          <h4>B. Đề xuất System Architecture (Đề Flower Shop &amp; CyberAIFPTx - 2.0đ)</h4>
+          <p>Trình bày mô hình <strong>4-Tier Layered Architecture</strong>: (1) <code>Presentation Layer</code> (Web/Mobile UI), (2) <code>API Gateway / Controller Layer</code> (Routing, JWT Auth, DTO validation), (3) <code>Business Service Layer</code> (Core services áp dụng Strategy/Observer/Factory), (4) <code>Data Access &amp; Persistence Layer</code> (Repository + Relational DB + Redis Cache). <strong>Lý do chọn:</strong> Separation of Concerns, High Maintainability, Independent Scalability.</p>
+
+          <h4>C. Bảng Use Case Specification (Đề SP26/FA26 Food Delivery - 2.5đ)</h4>
+          <p>Gồm đủ 6 dòng: <code>Use Case Name</code>, <code>Primary Actor</code>, <code>Preconditions</code> (User logged in, valid items selected), <code>Postconditions</code> (Order saved as CONFIRMED, payment recorded), <code>Main Success Scenario</code> (6 bước đánh số 1-6 tương tác giữa Actor và System), <code>Alternative/Exception Flows</code> (2a. Out of stock, 5a. Payment declined).</p>
+
+          <h4>D. Chuyển Class Diagram sang Database Schema (Đề Fall25 E-Learning - 1.0đ)</h4>
+          <p>Quan hệ <code>1 - N</code>: Đặt khóa ngoại <code>FK</code> ở bảng phía Nhiều (<code>*</code>). Quan hệ <code>N - N</code>: Tách thành bảng trung gian chứa 2 khóa ngoại <code>FK</code> trỏ về 2 bảng chính. Quan hệ <code>1 - 1</code>: Đặt <code>FK UNIQUE</code> ở bảng phụ thuộc.</p>
+        </div>
+
+        <!-- MODULE 07: BẢNG 10 ĐỀ THẬT & 15 LỖI -->
+        <div id="mod-exams" class="module-panel">
+          <h3>07. Danh sách 10 đề thi thật &amp; 15 lỗi bị trừ điểm</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Kỳ</th>
+                  <th>Tên đề / Domain</th>
+                  <th>Cấu trúc câu hỏi &amp; Điểm</th>
+                  <th>File đề (.md)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SU25</td>
+                  <td>Cinema Management</td>
+                  <td>Q1: FR/NFR (1đ) | Q2: Use Case (2đ) | Q3: Class (3.5đ) | Q4: ERD Crow's Foot (3.5đ)</td>
+                  <td><a href="FA26_On_Tap/SU25/SWD392_CinemaManagement_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SU25</td>
+                  <td>Online Flower Shop</td>
+                  <td>Q1: Architecture (2đ) | Q2: Activity Swimlanes (2đ) | Q3: Sequence (3đ) | Q4: Pattern (3đ)</td>
+                  <td><a href="FA26_On_Tap/SU25/SWD392_FlowerShop_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SU25</td>
+                  <td>CyberAIFPTx Security</td>
+                  <td>Q1: Architecture (2đ) | Q2: Activity (2đ) | Q3: Sequence (3đ) | Q4: Pattern (3đ)</td>
+                  <td><a href="FA26_On_Tap/SU25/SWD392_PracticalExam_CyberAIFPTx_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SU25</td>
+                  <td>Student Management</td>
+                  <td>Q1: ERD Chen (2.5đ) | Q2: Class (2.5đ) | Q3: Activity Swimlanes (2.5đ) | Q4: Sequence (2.5đ)</td>
+                  <td><a href="FA26_On_Tap/SU25/SWD392_StudentManagement_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SU25</td>
+                  <td>SmartHome Automation</td>
+                  <td>Q1: ERD Chen (2.5đ) | Q2: Class + Pattern (2.5đ) | Q3: Sequence (2.5đ) | Q4: Statechart (2.5đ)</td>
+                  <td><a href="FA26_On_Tap/SU25/SWD392_SU25_FinalExam_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>Fall25</td>
+                  <td>E-Learning Platform</td>
+                  <td>Q1: Class (2.5đ) | Q2: Sequence (2.5đ) | Q3: State Machine (2đ) | Q4: Activity (2đ) | Q5: Schema (1đ)</td>
+                  <td><a href="FA26_On_Tap/Fall25/SWD392_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SP26/FA26</td>
+                  <td>Food Delivery Platform</td>
+                  <td>Part 1: Use Case Diagram + UC Spec (5.0đ) | Part 2: Sequence + Class Diagram (5.0đ)</td>
+                  <td><a href="FA26_On_Tap/SP26/SWD392_PE_SPR26_ID.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SP26</td>
+                  <td>Event Management</td>
+                  <td>Q1: Class (3đ) | Q2: Sequence (3đ) | Q3: State Machine (2đ) | Q4: Design Pattern (2đ)</td>
+                  <td><a href="FA26_On_Tap/SP26/SWD392_SP26_EventManagementSystem_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SU26 PE1</td>
+                  <td>Ride-Hailing System</td>
+                  <td>Q1: Class Diagram 6 classes (4.0đ) | Q2: Sequence Diagram (4.0đ) | Q3: State Machine Trip (2.0đ)</td>
+                  <td><a href="FA26_On_Tap/SU26/SWD392_SU26_PE1.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>SU26 PE2</td>
+                  <td>MediCareHub Hospital</td>
+                  <td>Q1: Class Diagram 6 classes (4.0đ) | Q2: Sequence Diagram (4.0đ) | Q3: State Machine Appointment (2.0đ)</td>
+                  <td><a href="FA26_On_Tap/SU26/SWD392_SU26_MediCareHub_PE2.md">Mở đề</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: PEA REGULATION CALLOUT BANNER ("WHAT CLIENTS SAY" QUOTE STYLE FROM REFERENCE) -->
+      <div id="sec-rules" class="searchable-block">
+        <div class="section-bar">
+          <div class="section-bar-left">
+            <span class="lime-dot"></span>
+            <h2 class="section-title">NỘI QUY PHÒNG THI PEA BẮT BUỘC</h2>
+          </div>
+          <div class="section-bar-right">
+            <span>TUÂN THỦ TUYỆT ĐỐI ĐỂ KHÔNG VI PHẠM QUY CHẾ</span>
+          </div>
+        </div>
+
+        <div class="quote-banner">
+          <div class="quote-mark">“</div>
+          <div class="quote-text">
+            <strong>1. Tắt sạch ứng dụng chạy nền trước khi bật PEA:</strong> Ngay cả khi <code>OneDrive</code>, <code>Zalo</code>, <code>Discord</code>, <code>VS Code</code>, <code>Antigravity</code>, <code>Chrome/Edge</code>, <code>UltraViewer</code> hay <code>VMware</code> chỉ chạy ngầm ở khay hệ thống và chưa sử dụng, sinh viên vẫn bị tính là vi phạm.<br>
+            <strong>2. Cấm chụp ảnh màn hình trong suốt giờ thi:</strong> Tuyệt đối không bấm <code>Win + Shift + S</code> hay <code>PrtSc</code>. Để đưa sơ đồ vào Word, trong Draw.io Desktop chọn <code>File &gt; Export as &gt; PNG (Zoom 200%)</code> rồi vào Word chọn <code>Insert &gt; Pictures</code>.<br>
+            <strong>3. Lưu bài ẩn danh:</strong> Không ghi tên hoặc mã số sinh viên vào tên file/folder bài làm trừ khi đề yêu cầu rõ.
+          </div>
+          <div class="quote-author">
+            <div class="quote-author-name">QUY ĐỊNH THI THỰC HÀNH PEA</div>
+            <div class="quote-author-role">CHỈ MỞ: PEA + MS WORD + DRAW.IO DESKTOP</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6: 2-DAY INTERACTIVE CHECKLIST -->
+      <div id="sec-checklist" class="searchable-block">
+        <div class="section-bar">
+          <div class="section-bar-left">
+            <span class="lime-dot"></span>
+            <h2 class="section-title">CHECKLIST LỘ TRÌNH 2 NGÀY ÔN TẬP</h2>
+          </div>
+          <div class="section-bar-right no-print">
+            <button class="btn-chip" onclick="resetChecklist()">Đặt lại tiến độ</button>
+          </div>
+        </div>
+
+        <div class="checklist-grid">
+          <div class="checklist-box">
+            <div class="feature-card-top" style="margin-bottom:12px;">
+              <span class="feature-name" style="margin:0;">NGÀY 1: NẮM KÝ HIỆU &amp; VẼ THEO TEMPLATE</span>
+              <span class="feature-num">DAY 01</span>
+            </div>
+            <label class="check-row"><input type="checkbox" data-check="c1"><span><strong>Ca 1 (2h) - Class Diagram:</strong> Thuộc 6 loại mũi tên UML 2.5, mở file <code>01_Template_Class_Diagram_PE.drawio</code> và sửa theo đề SU26 MediCareHub (6 class).</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c2"><span><strong>Ca 2 (2h) - Sequence Diagram:</strong> Thuộc thứ tự 6 Lifeline, đánh số 1, 1.1, 1.2, vẽ khung <code>alt [Success/Else]</code> và reply nét đứt theo đề SU26 Ride-Hailing.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c3"><span><strong>Ca 3 (1.5h) - State Machine &amp; Activity:</strong> Vẽ vòng đời trạng thái <code>Trip / Appointment</code> và Activity Diagram 3 Swimlanes có Fork/Join bar.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c4"><span><strong>Ca 4 (1.5h) - ERD &amp; Use Case:</strong> Phân biệt Chen's ERD (không FK) và Crow's Foot (có PK/FK, tách bảng N-N); nắm chiều mũi tên <code>include</code> và <code>extend</code>.</span></label>
+          </div>
+
+          <div class="checklist-box">
+            <div class="feature-card-top" style="margin-bottom:12px;">
+              <span class="feature-name" style="margin:0;">NGÀY 2: DESIGN PATTERN &amp; LUYỆN ĐỀ BẤM GIỜ</span>
+              <span class="feature-num">DAY 02</span>
+            </div>
+            <label class="check-row"><input type="checkbox" data-check="c5"><span><strong>Ca 1 (1.5h) - 4 Design Pattern:</strong> Nắm vững cấu trúc Class Diagram của <code>Strategy</code>, <code>Observer</code>, <code>Singleton</code>, <code>Factory Method</code>.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c6"><span><strong>Ca 2 (1h) - Khung câu hỏi viết:</strong> Học thuộc khung trả lời FR/NFR, 4-Tier Layered Architecture, Use Case Specification và Database Schema.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c7"><span><strong>Ca 3 (1.5h) - Luyện đề bấm giờ số 1:</strong> Giải trọn vẹn đề <code>SU26 PE1</code> trong 85 phút, xuất ảnh PNG từ Draw.io chèn vào MS Word.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c8"><span><strong>Ca 4 (1.5h) - Luyện đề bấm giờ số 2 &amp; Soát máy:</strong> Giải đề <code>SP26 Event Management</code>, kiểm tra 3 file offline (<code>.docx</code> và <code>.drawio</code>) sẵn sàng cho phòng thi.</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: INTERACTIVE FLASHCARDS -->
+      <div id="sec-flashcards" class="searchable-block">
+        <div class="section-bar">
+          <div class="section-bar-left">
+            <span class="lime-dot"></span>
+            <h2 class="section-title">TỰ KIỂM TRA PHẢN XẠ TRƯỚC GIỜ THI</h2>
+          </div>
+          <div class="section-bar-right no-print">
+            <button class="btn-chip" onclick="toggleAllFlashcards(true)">Mở hết đáp án</button>
+            <button class="btn-chip" onclick="toggleAllFlashcards(false)">Đóng hết</button>
+          </div>
+        </div>
+
+        <div class="flashcard-grid">
+          <div class="flashcard">
+            <div class="flashcard-q">01. Class A thực thi (implement) Interface B thì vẽ mũi tên gì?</div>
+            <button class="btn-chip no-print" onclick="toggleFlashcard(this)">Xem đáp án</button>
+            <div class="flashcard-a">Dùng quan hệ <strong>Realization</strong>: Đường <strong>NÉT ĐỨT</strong> + đầu <strong>TAM GIÁC RỖNG</strong> trỏ về phía <code>&lt;&lt;interface&gt;&gt; B</code>.</div>
+          </div>
+
+          <div class="flashcard">
+            <div class="flashcard-q">02. Giữa MedicalRecord và Prescription dùng hình thoi đặc hay rỗng? Đặt ở đâu?</div>
+            <button class="btn-chip no-print" onclick="toggleFlashcard(this)">Xem đáp án</button>
+            <div class="flashcard-a">Dùng <strong>Hình thoi ĐẶC (Composition)</strong> đặt sát cạnh <code>MedicalRecord</code> (phía Whole), vì xóa bệnh án thì đơn thuốc bên trong không tồn tại độc lập.</div>
+          </div>
+
+          <div class="flashcard">
+            <div class="flashcard-q">03. Chiều mũi tên &lt;&lt;include&gt;&gt; và &lt;&lt;extend&gt;&gt; trong Use Case khác nhau thế nào?</div>
+            <button class="btn-chip no-print" onclick="toggleFlashcard(this)">Xem đáp án</button>
+            <div class="flashcard-a"><code>&lt;&lt;include&gt;&gt;</code>: Mũi tên nét đứt trỏ từ <strong>UC Chính sang UC Phụ bắt buộc</strong>.<br><code>&lt;&lt;extend&gt;&gt;</code>: Mũi tên nét đứt trỏ từ <strong>UC Phụ tùy chọn ngược về UC Chính</strong>.</div>
+          </div>
+
+          <div class="flashcard">
+            <div class="flashcard-q">04. Đề bài yêu cầu vẽ "Conceptual ERD (Chen's Notation)", có được ghi FK và kiểu dữ liệu không?</div>
+            <button class="btn-chip no-print" onclick="toggleFlashcard(this)">Xem đáp án</button>
+            <div class="flashcard-a"><strong>Tuyệt đối KHÔNG.</strong> Chen's ERD chỉ dùng Hình chữ nhật (Entity), Hình thoi (Relationship), Hình Elip (Attribute) và gạch chân khóa chính trong Elip.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER CTA SECTION ("HAVE A PROJECT IN MIND?" STYLE FROM REFERENCE) -->
+      <div class="footer-cta">
+        <div>
+          <div class="section-bar-left" style="margin-bottom:10px;">
+            <span class="lime-dot"></span>
+            <span class="section-title">TÀI LIỆU MỞ TRONG PHÒNG THI</span>
+          </div>
+          <h2 class="footer-big-title">
+            SẴN SÀNG VÀO
+            <span>PHÒNG THI?</span>
+          </h2>
+        </div>
+
+        <div>
+          <p class="footer-mid-text">
+            Trước khi mở phần mềm PEA, hãy đóng trình duyệt này lại và mở sẵn 3 tệp tài liệu offline hợp lệ bên cạnh bằng <strong>Microsoft Word</strong> và <strong>Draw.io Desktop</strong>.
+          </p>
+          <button class="footer-action-circle no-print" onclick="window.print()">
+            <span class="circle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M7 17L17 7M17 7H8M17 7V16"/>
+              </svg>
+            </span>
+            <span>IN HOẶC XUẤT PDF TÀI LIỆU NÀY</span>
+          </button>
+        </div>
+
+        <div class="contact-stack">
+          <a class="contact-card" href="FA26_On_Tap/On_tap_SWD392_PE_2_ngay.docx">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <div>
+              <span class="contact-card-label">MỞ BẰNG MICROSOFT WORD</span>
+              <span class="contact-card-val">On_tap_SWD392_PE_2_ngay.docx</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="FA26_On_Tap/Templates_Hinh_Ve/Bo_Template_Tat_Ca_Cac_Hinh_SWD392.docx">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="4" width="18" height="16" rx="2"/>
+              <line x1="7" y1="9" x2="17" y2="9"/>
+              <line x1="7" y1="13" x2="17" y2="13"/>
+            </svg>
+            <div>
+              <span class="contact-card-label">SỔ TAY MẪU HÌNH VẼ (.DOCX)</span>
+              <span class="contact-card-val">Bo_Template_Tat_Ca_Cac_Hinh.docx</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="FA26_On_Tap/Templates_Hinh_Ve/00_SWD392_PE_ALL_IN_ONE_TEMPLATES.drawio">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+            <div>
+              <span class="contact-card-label">MỞ BẰNG DRAW.IO DESKTOP</span>
+              <span class="contact-card-val">00_SWD392_PE_ALL_IN_ONE.drawio</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="bottom-copyright">
+      <span>SWD392 PRACTICAL EXAM STUDY SYSTEM</span>
+      <span>UML 2.5 COMPLIANT // FPT UNIVERSITY</span>
+    </footer>
+
+  </div>
+
+  <script>
+    // Chuyển tab trong phần Deep-Dive Modules
+    function switchModule(modId, btnEl) {
+      var panels = document.querySelectorAll('.module-panel');
+      panels.forEach(function(p) { p.classList.remove('active'); });
+      var btns = document.querySelectorAll('.module-tab-btn');
+      btns.forEach(function(b) { b.classList.remove('active'); });
+
+      var target = document.getElementById(modId);
+      if (target) target.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+    }
+
+    // Checklist lưu tiến độ tự động vào localStorage
+    (function initChecklist() {
+      var boxes = document.querySelectorAll('input[data-check]');
+      boxes.forEach(function(cb) {
+        var key = 'swd392_v2_' + cb.getAttribute('data-check');
+        if (localStorage.getItem(key) === '1') {
+          cb.checked = true;
+          cb.parentElement.classList.add('checked');
+        }
+        cb.addEventListener('change', function() {
+          if (cb.checked) {
+            localStorage.setItem(key, '1');
+            cb.parentElement.classList.add('checked');
+          } else {
+            localStorage.removeItem(key);
+            cb.parentElement.classList.remove('checked');
+          }
+          updateProgress();
+        });
+      });
+      updateProgress();
+    })();
+
+    function updateProgress() {
+      var boxes = document.querySelectorAll('input[data-check]');
+      if (!boxes.length) return;
+      var checkedCount = 0;
+      boxes.forEach(function(cb) { if (cb.checked) checkedCount++; });
+      var pct = Math.round((checkedCount / boxes.length) * 100);
+      document.getElementById('progressPercent').textContent = pct + '%';
+      document.getElementById('progressBar').style.width = pct + '%';
+    }
+
+    function resetChecklist() {
+      var boxes = document.querySelectorAll('input[data-check]');
+      boxes.forEach(function(cb) {
+        var key = 'swd392_v2_' + cb.getAttribute('data-check');
+        localStorage.removeItem(key);
+        cb.checked = false;
+        cb.parentElement.classList.remove('checked');
+      });
+      updateProgress();
+    }
+
+    // Flashcards
+    function toggleFlashcard(btn) {
+      var ans = btn.nextElementSibling;
+      if (ans) ans.classList.toggle('open');
+    }
+
+    function toggleAllFlashcards(openState) {
+      var all = document.querySelectorAll('.flashcard-a');
+      all.forEach(function(a) {
+        if (openState) a.classList.add('open');
+        else a.classList.remove('open');
+      });
+    }
+
+    // Đồng hồ bấm giờ luyện đề
+    var timerSeconds = 90 * 60;
+    var timerRef = null;
+
+    function renderTimer() {
+      var m = Math.floor(timerSeconds / 60);
+      var s = timerSeconds % 60;
+      var ms = m < 10 ? '0' + m : '' + m;
+      var ss = s < 10 ? '0' + s : '' + s;
+      document.getElementById('timerDisplay').textContent = ms + ':' + ss;
+    }
+
+    function toggleTimer() {
+      var btn = document.getElementById('timerStartBtn');
+      if (timerRef) {
+        clearInterval(timerRef);
+        timerRef = null;
+        btn.textContent = 'Tiếp tục';
+      } else {
+        btn.textContent = 'Tạm dừng';
+        timerRef = setInterval(function() {
+          if (timerSeconds > 0) {
+            timerSeconds--;
+            renderTimer();
+          } else {
+            clearInterval(timerRef);
+            timerRef = null;
+            btn.textContent = 'Hết giờ';
+          }
+        }, 1000);
+      }
+    }
+
+    function resetTimer(mins) {
+      if (timerRef) {
+        clearInterval(timerRef);
+        timerRef = null;
+      }
+      timerSeconds = mins * 60;
+      document.getElementById('timerStartBtn').textContent = 'Bắt đầu';
+      renderTimer();
+    }
+
+    // Tìm kiếm nhanh
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      var q = e.target.value.trim().toLowerCase();
+      var panels = document.querySelectorAll('.module-panel');
+      if (!q) {
+        panels.forEach(function(p, idx) {
+          p.style.display = '';
+          if (idx === 0) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+        return;
+      }
+      panels.forEach(function(p) {
+        if (p.textContent.toLowerCase().indexOf(q) !== -1) {
+          p.style.display = 'block';
+        } else {
+          p.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
