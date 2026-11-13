@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SWD392 — Sổ Tay Ôn Tập Thực Hành (PE)</title>
+  <title>SWD392 - Sổ Tay Ôn Tập Thực Hành (PE)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,7 +39,7 @@
       </div>
     </header>
 
-    <!-- HERO SECTION (MATCHING REFERENCE PORTFOLIO LAYOUT) -->
+    <!-- HERO SECTION -->
     <section class="hero-section">
       <div class="hero-left">
         <h1 class="hero-title">
@@ -47,7 +47,7 @@
           <span class="lime-word">PRACTICAL.</span>
         </h1>
         <p class="hero-subtitle">
-          TÀI LIỆU ÔN TẬP CÔ ĐỌNG TỪ <span class="highlight-lime">10 ĐỀ THI THẬT</span>,
+          TÀI LIỆU ÔN TẬP CÔ ĐỌNG TỪ <span class="highlight-lime">11 ĐỀ THI THẬT</span>,
           BÁM SÁT QUY CHUẨN <span class="highlight-lime">UML 2.5</span> VÀ QUY CHẾ PHÒNG THI PEA.
         </p>
 
@@ -59,7 +59,7 @@
             </svg>
             <div class="meta-text">
               <span>PHẠM VI ÔN TẬP</span>
-              10 ĐỀ THI THẬT
+              11 ĐỀ THI THẬT
             </div>
           </div>
           <div class="hero-meta-cell">
@@ -103,7 +103,7 @@
 
       <!-- SEARCH & PROGRESS STRIP -->
       <div class="toolbar-strip no-print">
-        <input type="text" id="searchInput" class="search-field" placeholder="Nhập từ khóa để lọc nhanh nội dung (ví dụ: Strategy, Realization, ERD Chen, Sequence, PEA)...">
+        <input type="text" id="searchInput" class="search-field" placeholder="Nhập từ khóa để lọc nhanh nội dung (ví dụ: StayEase, Strategy, Realization, ERD Chen, Crow's Foot, Swimlane)...">
         <div class="progress-inline">
           <span>TIẾN ĐỘ 2 NGÀY</span>
           <div class="progress-track-mini">
@@ -113,15 +113,15 @@
         </div>
       </div>
 
-      <!-- SECTION 1: 4 TRỤ CỘT ĐIỂM SỐ ("WHAT I DO" 4-CARD BENTO STYLE) -->
+      <!-- SECTION 1: 4 TRỤ CỘT ĐIỂM SỐ -->
       <div id="sec-overview" class="searchable-block">
         <div class="section-bar">
           <div class="section-bar-left">
             <span class="lime-dot"></span>
-            <h2 class="section-title">CẤU TRÚC ĐỀ THI</h2>
+            <h2 class="section-title">CẤU TRÚC 11 ĐỀ THI THẬT</h2>
           </div>
           <div class="section-bar-right">
-            <span>PHÂN TÍCH TỪ SU25, FALL25, SP26, SU26, FA26</span>
+            <span>PHÂN TÍCH TỪ SU25, FALL25, SP26, SU26, FA26_EXAMPLE</span>
           </div>
         </div>
 
@@ -139,7 +139,7 @@
                 <span class="feature-num">01</span>
               </div>
               <h3 class="feature-name">CLASS DIAGRAM</h3>
-              <p class="feature-desc">Xuất hiện ở 10/10 đề thi. Trọng tâm gồm 5-6 lớp thực thể chính, đầy đủ visibility (-/+), multiplicity và đúng 6 loại mũi tên chuẩn UML 2.5.</p>
+              <p class="feature-desc">Xuất hiện ở 11/11 đề thi (gồm Domain Class và Design-level Class có Service, Repository, IGenericRepository như đề StayEase).</p>
             </div>
             <div class="feature-foot">
               <span>2.5 - 4.0 ĐIỂM</span>
@@ -159,11 +159,11 @@
                 <span class="feature-num">02</span>
               </div>
               <h3 class="feature-name">SEQUENCE DIAGRAM</h3>
-              <p class="feature-desc">Xuất hiện ở 9/10 đề thi. Mô tả luồng nghiệp vụ từ Actor qua UI, Controller, Service, Gateway/DB kèm khung alt [Success/Failure] và reply nét đứt.</p>
+              <p class="feature-desc">Xuất hiện ở 10/11 đề thi. Mô tả luồng nghiệp vụ Layered Architecture (UI, Controller, Service, Repository, Entity) kèm khung alt lồng nhau.</p>
             </div>
             <div class="feature-foot">
               <span>2.5 - 4.0 ĐIỂM</span>
-              <span>90% ĐỀ RA</span>
+              <span>91% ĐỀ RA</span>
             </div>
           </article>
 
@@ -181,10 +181,10 @@
                 <span class="feature-num">03</span>
               </div>
               <h3 class="feature-name">STATE &amp; ACTIVITY</h3>
-              <p class="feature-desc">State Machine (50% đề) vẽ vòng đời 1 đối tượng (Trip, Appointment); Activity Swimlanes (40% đề) vẽ luồng liên phòng ban có Fork/Join.</p>
+              <p class="feature-desc">State Machine (5/11 đề) vẽ vòng đời 1 đối tượng; Activity Swimlanes (5/11 đề, như câu Check-out &amp; Inspection 3.0đ đề StayEase).</p>
             </div>
             <div class="feature-foot">
-              <span>2.0 - 2.5 ĐIỂM</span>
+              <span>2.0 - 3.0 ĐIỂM</span>
               <span>RẤT HAY RA</span>
             </div>
           </article>
@@ -201,7 +201,7 @@
                 <span class="feature-num">04</span>
               </div>
               <h3 class="feature-name">PATTERN, ERD &amp; UC</h3>
-              <p class="feature-desc">4 mẫu Design Pattern (Strategy, Observer, Singleton, Factory Method), ERD (Chen vs Crow's Foot) và Use Case Diagram kèm đặc tả.</p>
+              <p class="feature-desc">4 mẫu GoF Pattern (Strategy, Observer, Singleton, Factory Method) + Repository Pattern, ERD (Chen vs Crow's Foot) và Use Case.</p>
             </div>
             <div class="feature-foot">
               <span>2.0 - 5.0 ĐIỂM</span>
@@ -211,7 +211,7 @@
         </div>
       </div>
 
-      <!-- SECTION 2: 3 SHOWCASE CARDS ("SELECTED WORK" STYLE FROM REFERENCE) -->
+      <!-- SECTION 2: 3 SHOWCASE CARDS -->
       <div id="sec-patterns" class="searchable-block">
         <div class="section-bar">
           <div class="section-bar-left">
@@ -224,73 +224,73 @@
         </div>
 
         <div class="showcase-grid">
-          <!-- Showcase 01: Light Preview -->
+          <!-- Showcase 01 -->
           <div class="showcase-card">
             <div class="showcase-preview light-mode">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-                <span class="badge-pill badge-lime">UML 2.5 CLASS</span>
-                <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-muted);">6 QUAN HỆ CHUẨN</span>
+                <span class="badge-pill badge-lime">DESIGN-LEVEL CLASS</span>
+                <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-muted);">STAYEASE / SU26</span>
               </div>
               <svg viewBox="0 0 320 120" width="100%" height="120" font-family="Consolas, monospace" font-size="10">
-                <rect x="6" y="12" width="105" height="44" rx="4" fill="#fff" stroke="#111312" stroke-width="1.4"/>
-                <text x="16" y="28" font-weight="bold">MedicalRecord</text>
-                <line x1="6" y1="34" x2="111" y2="34" stroke="#111312"/>
-                <text x="12" y="48">- recordId: String</text>
+                <rect x="6" y="10" width="108" height="44" rx="4" fill="#fff" stroke="#111312" stroke-width="1.4"/>
+                <text x="14" y="26" font-weight="bold">Reservation</text>
+                <line x1="6" y1="32" x2="114" y2="32" stroke="#111312"/>
+                <text x="12" y="46">- totalAmount</text>
 
-                <polygon points="111,34 121,28 131,34 121,40" fill="#111312"/>
-                <line x1="131" y1="34" x2="195" y2="34" stroke="#111312" stroke-width="1.4"/>
-                <text x="135" y="27">1</text>
-                <text x="172" y="27">0..*</text>
+                <polygon points="114,32 124,26 134,32 124,38" fill="#111312"/>
+                <line x1="134" y1="32" x2="195" y2="32" stroke="#111312" stroke-width="1.4"/>
+                <text x="138" y="25">1</text>
+                <text x="172" y="25">1..*</text>
 
-                <rect x="195" y="12" width="115" height="44" rx="4" fill="#fff" stroke="#111312" stroke-width="1.4"/>
-                <text x="210" y="28" font-weight="bold">Prescription</text>
-                <line x1="195" y1="34" x2="310" y2="34" stroke="#111312"/>
-                <text x="202" y="48">- dosage: String</text>
+                <rect x="195" y="10" width="115" height="44" rx="4" fill="#fff" stroke="#111312" stroke-width="1.4"/>
+                <text x="215" y="26" font-weight="bold">Payment</text>
+                <line x1="195" y1="32" x2="310" y2="32" stroke="#111312"/>
+                <text x="202" y="46">- type: String</text>
 
-                <text x="8" y="86" fill="#373c39">Thoi ĐẶC (Composition): Xóa A mất B</text>
-                <text x="8" y="104" fill="#56b800" font-weight="bold">Thoi RỖNG (Aggregation): Xóa A còn B</text>
+                <text x="8" y="82" fill="#373c39">BookingService ..&gt; IGenericRepository</text>
+                <text x="8" y="102" fill="#56b800" font-weight="bold">RoomRepository ..|&gt; IGenericRepository</text>
               </svg>
             </div>
             <div class="showcase-meta">
               <span class="showcase-num">01</span>
               <div>
-                <h3 class="showcase-title">DOMAIN CLASS &amp; MULTIPLICITY</h3>
-                <p class="showcase-sub">Hình thoi luôn đặt ở phía Whole (lớp chứa). Luôn ghi rõ 1, 0..1, 0..*, 1..* ở hai đầu dây.</p>
+                <h3 class="showcase-title">LAYERED &amp; DOMAIN CLASS</h3>
+                <p class="showcase-sub">Hỗ trợ cả Domain Class (6 thực thể) lẫn Design-level Class có Service phụ thuộc Interface Repository.</p>
               </div>
             </div>
           </div>
 
-          <!-- Showcase 02: Dark High-Contrast Preview with Glowing Lime Orb (Exact Match to Reference Center Card) -->
+          <!-- Showcase 02 -->
           <div class="showcase-card">
             <div class="showcase-preview dark-mode">
               <div class="dark-orb"></div>
               <div style="display:flex;justify-content:space-between;align-items:center;">
-                <span class="badge-pill badge-dark" style="border:1px solid #333;">4 DESIGN PATTERNS</span>
-                <span style="font-size:10.5px;color:#9ba29d;font-family:var(--font-mono);">GOF PATTERNS</span>
+                <span class="badge-pill badge-dark" style="border:1px solid #333;">4 GOF + REPOSITORY</span>
+                <span style="font-size:10.5px;color:#9ba29d;font-family:var(--font-mono);">DESIGN PATTERNS</span>
               </div>
-              <div style="my:auto;z-index:1;">
+              <div style="z-index:1;">
                 <div style="font-size:17px;font-weight:800;line-height:1.25;margin:12px 0 8px;">
                   Strategy, Observer,<br>
                   <span style="color:var(--lime-neon);">Singleton &amp; Factory.</span>
                 </div>
-                <p style="font-size:11.5px;color:#b5bcb7;max-width:220px;">
-                  Realization bắt buộc vẽ bằng NÉT ĐỨT + tam giác rỗng trỏ vào &lt;&lt;interface&gt;&gt;.
+                <p style="font-size:11.5px;color:#b5bcb7;max-width:230px;">
+                  Kèm mẫu Repository Pattern (`IGenericRepository`) trong đề FA26_Example StayEase.
                 </p>
               </div>
               <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--lime-neon);z-index:1;">
-                - instance: Singleton [static]
+                + getById(id) / + save(entity) / + updateStatus()
               </div>
             </div>
             <div class="showcase-meta">
               <span class="showcase-num">02</span>
               <div>
-                <h3 class="showcase-title">4 MẪU DESIGN PATTERN TRONG ĐỀ</h3>
+                <h3 class="showcase-title">MẪU DESIGN PATTERN TRONG ĐỀ</h3>
                 <p class="showcase-sub">Đổi thuật toán: Strategy | Đa kênh thông báo: Observer | 1 phiên bản: Singleton | Tạo đối tượng: Factory.</p>
               </div>
             </div>
           </div>
 
-          <!-- Showcase 03: Dual-Screen Preview (Exact Match to Reference Right Card) -->
+          <!-- Showcase 03 -->
           <div class="showcase-card">
             <div class="showcase-preview light-mode">
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;height:100%;">
@@ -319,293 +319,728 @@
         </div>
       </div>
 
-      <!-- SECTION 3: METRICS STRIP ("28+ / 14+ / 99% / 5+" STYLE FROM REFERENCE) -->
+      <!-- SECTION 3: METRICS STRIP -->
       <div class="metrics-strip searchable-block">
         <div class="metric-item">
-          <div class="metric-value">10/10</div>
+          <div class="metric-value">11/11</div>
           <div class="metric-label">ĐỀ THI CÓ<br>CLASS DIAGRAM</div>
         </div>
         <div class="metric-item">
-          <div class="metric-value">9/10</div>
+          <div class="metric-value">10/11</div>
           <div class="metric-label">ĐỀ THI CÓ<br>SEQUENCE DIAGRAM</div>
         </div>
         <div class="metric-item">
-          <div class="metric-value">5/10</div>
-          <div class="metric-label">ĐỀ THI CÓ<br>STATE MACHINE</div>
+          <div class="metric-value">10/11</div>
+          <div class="metric-label">ĐỀ CÓ STATE MACHINE<br>HOẶC ACTIVITY SWIMLANES</div>
         </div>
         <div class="metric-item">
-          <div class="metric-value">04</div>
-          <div class="metric-label">MẪU DESIGN PATTERN<br>DUY NHẤT TRONG ĐỀ</div>
+          <div class="metric-value">05</div>
+          <div class="metric-label">MẪU PATTERN<br>(4 GOF + REPOSITORY)</div>
         </div>
       </div>
 
-      <!-- SECTION 4: INTERACTIVE DEEP-DIVE MODULES (ALL 6 DIAGRAMS, 4 PATTERNS, 10 EXAMS, WRITTEN TEMPLATES) -->
+      <!-- SECTION 4: INTERACTIVE DEEP-DIVE MODULES -->
       <div id="sec-diagrams" class="searchable-block">
         <div class="section-bar">
           <div class="section-bar-left">
             <span class="lime-dot"></span>
-            <h2 class="section-title">CHI TIẾT CÁCH VẼ &amp; KHUNG TRẢ LỜI THEO TỪNG CÂU</h2>
+            <h2 class="section-title">CHI TIẾT CÁCH VẼ &amp; HÌNH MINH HỌA KÝ HIỆU THẬT</h2>
           </div>
           <div class="section-bar-right">
-            <span>CHỌN TỪNG MỤC ĐỂ XEM SƠ ĐỒ CHUẨN</span>
+            <span>BẤM VÀO TỪNG MỤC ĐỂ XEM BẢNG KÝ HIỆU HÌNH THẬT &amp; SƠ ĐỒ MẪU</span>
           </div>
         </div>
 
         <div class="module-tabs no-print">
           <button class="module-tab-btn active" onclick="switchModule('mod-class', this)">01. Class Diagram</button>
           <button class="module-tab-btn" onclick="switchModule('mod-seq', this)">02. Sequence Diagram</button>
-          <button class="module-tab-btn" onclick="switchModule('mod-state', this)">03. State &amp; Activity</button>
-          <button class="module-tab-btn" onclick="switchModule('mod-erd', this)">04. ERD &amp; Use Case</button>
-          <button class="module-tab-btn" onclick="switchModule('mod-pattern', this)">05. 4 Design Patterns</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-state', this)">03. State &amp; Activity (Chi tiết)</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-erd', this)">04. ERD &amp; Use Case (Chi tiết)</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-pattern', this)">05. Design Patterns</button>
           <button class="module-tab-btn" onclick="switchModule('mod-writing', this)">06. Khung Câu Viết</button>
-          <button class="module-tab-btn" onclick="switchModule('mod-exams', this)">07. Bảng 10 Đề Thật &amp; 15 Lỗi</button>
+          <button class="module-tab-btn" onclick="switchModule('mod-exams', this)">07. Bảng 11 Đề Thật &amp; Đề StayEase</button>
         </div>
 
         <!-- MODULE 01: CLASS DIAGRAM -->
         <div id="mod-class" class="module-panel active">
-          <h3>01. Hướng dẫn vẽ Class Diagram (Xuất hiện 10/10 đề - 2.5 đến 4.0 điểm)</h3>
+          <h3>01. Hướng dẫn vẽ Class Diagram (Xuất hiện 11/11 đề - 2.5 đến 4.0 điểm)</h3>
           <p>File mẫu mở trong Draw.io Desktop: <a href="Templates_Hinh_Ve/01_Template_Class_Diagram_PE.drawio"><code>01_Template_Class_Diagram_PE.drawio</code></a></p>
 
+          <h4>A. Bảng 6 quan hệ chuẩn UML 2.5 (Hình ký hiệu thật)</h4>
           <div class="svg-board">
             <svg viewBox="0 0 860 225" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="12">
-              <text x="15" y="28" font-weight="bold">1. Inheritance (Kế thừa: A là 1 loại B)</text>
-              <line x1="330" y1="24" x2="475" y2="24" stroke="#111" stroke-width="1.8"/>
-              <polygon points="490,24 475,17 475,31" fill="#fff" stroke="#111" stroke-width="1.8"/>
-              <text x="510" y="28">Nét liền + Tam giác rỗng (Trỏ vào lớp Cha)</text>
+              <text x="15" y="28" font-weight="bold">1. Inheritance (Kế thừa: Customer, Host kế thừa User)</text>
+              <line x1="365" y1="24" x2="495" y2="24" stroke="#111" stroke-width="1.8"/>
+              <polygon points="510,24 495,17 495,31" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <text x="525" y="28">Nét liền + Tam giác rỗng (Trỏ vào lớp Cha)</text>
 
-              <text x="15" y="64" font-weight="bold">2. Realization (Implement Interface)</text>
-              <line x1="330" y1="60" x2="475" y2="60" stroke="#111" stroke-width="1.8" stroke-dasharray="6,4"/>
-              <polygon points="490,60 475,53 475,67" fill="#fff" stroke="#111" stroke-width="1.8"/>
-              <text x="510" y="64">Nét đứt + Tam giác rỗng (Trỏ vào Interface)</text>
+              <text x="15" y="64" font-weight="bold">2. Realization (RoomRepo thực thi IGenericRepo)</text>
+              <line x1="365" y1="60" x2="495" y2="60" stroke="#111" stroke-width="1.8" stroke-dasharray="6,4"/>
+              <polygon points="510,60 495,53 495,67" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <text x="525" y="64">Nét đứt + Tam giác rỗng (Trỏ vào Interface)</text>
 
-              <text x="15" y="100" font-weight="bold">3. Composition (Chứa chặt: Xóa A mất B)</text>
-              <polygon points="330,96 342,89 354,96 342,103" fill="#111" stroke="#111" stroke-width="1.5"/>
-              <line x1="354" y1="96" x2="490" y2="96" stroke="#111" stroke-width="1.8"/>
-              <text x="360" y="90">1</text>
-              <text x="460" y="90">1..*</text>
-              <text x="510" y="100">Hình thoi ĐẶC đặt ở phía Whole (Lớp chứa)</text>
+              <text x="15" y="100" font-weight="bold">3. Composition (Reservation chứa chặt Payment)</text>
+              <polygon points="365,96 377,89 389,96 377,103" fill="#111" stroke="#111" stroke-width="1.5"/>
+              <line x1="389" y1="96" x2="510" y2="96" stroke="#111" stroke-width="1.8"/>
+              <text x="395" y="90">1</text>
+              <text x="480" y="90">1..*</text>
+              <text x="525" y="100">Hình thoi ĐẶC đặt ở phía Whole (Reservation)</text>
 
-              <text x="15" y="136" font-weight="bold">4. Aggregation (Chứa lỏng: Xóa A còn B)</text>
-              <polygon points="330,132 342,125 354,132 342,139" fill="#fff" stroke="#111" stroke-width="1.8"/>
-              <line x1="354" y1="132" x2="490" y2="132" stroke="#111" stroke-width="1.8"/>
-              <text x="360" y="126">1</text>
-              <text x="460" y="126">0..*</text>
-              <text x="510" y="136">Hình thoi RỖNG đặt ở phía Whole (Lớp chứa)</text>
+              <text x="15" y="136" font-weight="bold">4. Aggregation (Chứa lỏng: Xóa A vẫn còn B)</text>
+              <polygon points="365,132 377,125 389,132 377,139" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <line x1="389" y1="132" x2="510" y2="132" stroke="#111" stroke-width="1.8"/>
+              <text x="395" y="126">1</text>
+              <text x="480" y="126">0..*</text>
+              <text x="525" y="136">Hình thoi RỖNG đặt ở phía Whole (Lớp chứa)</text>
 
-              <text x="15" y="172" font-weight="bold">5. Association (Liên kết thực thể)</text>
-              <line x1="330" y1="168" x2="490" y2="168" stroke="#111" stroke-width="1.8"/>
-              <polyline points="478,161 490,168 478,175" fill="none" stroke="#111" stroke-width="1.8"/>
-              <text x="340" y="162">1</text>
-              <text x="455" y="162">0..*</text>
-              <text x="510" y="172">Nét liền + bắt buộc ghi Multiplicity ở 2 đầu</text>
+              <text x="15" y="172" font-weight="bold">5. Association (Customer tạo nhiều Reservation)</text>
+              <line x1="365" y1="168" x2="510" y2="168" stroke="#111" stroke-width="1.8"/>
+              <polyline points="498,161 510,168 498,175" fill="none" stroke="#111" stroke-width="1.8"/>
+              <text x="372" y="162">1</text>
+              <text x="475" y="162">0..*</text>
+              <text x="525" y="172">Nét liền + bắt buộc ghi Multiplicity ở 2 đầu</text>
 
-              <text x="15" y="208" font-weight="bold">6. Dependency (Tham số hàm tạm thời)</text>
-              <line x1="330" y1="204" x2="490" y2="204" stroke="#111" stroke-width="1.8" stroke-dasharray="6,4"/>
-              <polyline points="478,197 490,204 478,211" fill="none" stroke="#111" stroke-width="1.8"/>
-              <text x="510" y="208">Nét đứt + Mũi tên hở (Controller dùng DTO)</text>
+              <text x="15" y="208" font-weight="bold">6. Dependency (BookingService phụ thuộc IRepo)</text>
+              <line x1="365" y1="204" x2="510" y2="204" stroke="#111" stroke-width="1.8" stroke-dasharray="6,4"/>
+              <polyline points="498,197 510,204 498,211" fill="none" stroke="#111" stroke-width="1.8"/>
+              <text x="525" y="208">Nét đứt + Mũi tên hở (Service -&gt; Repository)</text>
             </svg>
           </div>
 
-          <h4>Quy tắc 5 bước ăn trọn điểm Class Diagram</h4>
-          <ol style="margin-left:20px;">
-            <li>Mỗi Class phải chia đúng 3 ngăn: Tên Class, ngăn Attributes có dấu <code>-</code> (private) kèm kiểu dữ liệu (<code>String</code>, <code>Double</code>, <code>DateTime</code>, <code>Boolean</code>), và ngăn Methods có dấu <code>+</code> (public) kèm kiểu trả về.</li>
-            <li>Nếu 2 lớp có chung tập thuộc tính (như <code>Passenger</code> và <code>Driver</code> cùng có <code>id, fullName, phone</code>), tạo lớp cha <code>User</code> và nối mũi tên Inheritance (nét liền + tam giác rỗng) trỏ lên <code>User</code>.</li>
-            <li>Phân biệt rõ <strong>Composition (thoi đặc)</strong> cho các phần tử phụ thuộc sống còn (<code>Order *-- OrderItem</code>, <code>MedicalRecord *-- Prescription</code>) và <strong>Aggregation (thoi rỗng)</strong> cho các phần tử độc lập (<code>Department o-- Doctor</code>, <code>Course o-- Lesson</code>).</li>
-            <li>Kiểm tra 100% các đường nối phải có con số Multiplicity (<code>1</code>, <code>0..1</code>, <code>0..*</code>, <code>1..*</code>) ở cả 2 đầu dây.</li>
-          </ol>
+          <h4>B. Sơ đồ mẫu Design-level Class Diagram (Đề FA26_Example - StayEase Homestay)</h4>
+          <div class="svg-board">
+            <svg viewBox="0 0 900 350" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11">
+              <!-- User -->
+              <rect x="20" y="15" width="160" height="75" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="82" y="32" font-weight="bold">User</text>
+              <line x1="20" y1="38" x2="180" y2="38" stroke="#111"/>
+              <text x="26" y="53">- userId: String</text>
+              <text x="26" y="67">- fullName: String</text>
+              <line x1="20" y1="73" x2="180" y2="73" stroke="#111"/>
+              <text x="26" y="85">+ login(): Boolean</text>
+
+              <!-- Inheritance arrows from Customer and Host to User -->
+              <polygon points="65,90 59,102 71,102" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <line x1="65" y1="102" x2="65" y2="135" stroke="#111" stroke-width="1.5"/>
+
+              <polygon points="145,90 139,102 151,102" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <line x1="145" y1="102" x2="145" y2="245" stroke="#111" stroke-width="1.5"/>
+
+              <!-- Customer -->
+              <rect x="15" y="135" width="175" height="75" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="72" y="152" font-weight="bold">Customer</text>
+              <line x1="15" y1="158" x2="190" y2="158" stroke="#111"/>
+              <text x="22" y="173">- loyaltyPoints: Int</text>
+              <line x1="15" y1="182" x2="190" y2="182" stroke="#111"/>
+              <text x="22" y="198">+ bookRoom(): Reservation</text>
+
+              <!-- Host -->
+              <rect x="15" y="245" width="175" height="80" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="84" y="262" font-weight="bold">Host</text>
+              <line x1="15" y1="268" x2="190" y2="268" stroke="#111"/>
+              <text x="22" y="283">- taxCode: String</text>
+              <line x1="15" y1="292" x2="190" y2="292" stroke="#111"/>
+              <text x="22" y="307">+ listProperty(): Room</text>
+              <text x="22" y="320">+ inspectRoom(): void</text>
+
+              <!-- Reservation -->
+              <rect x="260" y="125" width="195" height="95" fill="#f8faf8" stroke="#111" stroke-width="1.6"/>
+              <text x="318" y="142" font-weight="bold">Reservation</text>
+              <line x1="260" y1="148" x2="455" y2="148" stroke="#111"/>
+              <text x="268" y="163">- reservationId: String</text>
+              <text x="268" y="177">- checkInDate: Date</text>
+              <text x="268" y="191">- totalAmount: Double</text>
+              <line x1="260" y1="197" x2="455" y2="197" stroke="#111"/>
+              <text x="268" y="212">+ calculateTotal(): Double</text>
+
+              <!-- Customer (1) --- (0..*) Reservation -->
+              <line x1="190" y1="172" x2="260" y2="172" stroke="#111" stroke-width="1.5"/>
+              <text x="196" y="166">1</text>
+              <text x="230" y="166">0..*</text>
+
+              <!-- Room -->
+              <rect x="260" y="250" width="195" height="85" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="340" y="267" font-weight="bold">Room</text>
+              <line x1="260" y1="273" x2="455" y2="273" stroke="#111"/>
+              <text x="268" y="288">- roomId: String</text>
+              <text x="268" y="302">- status: String</text>
+              <line x1="260" y1="308" x2="455" y2="308" stroke="#111"/>
+              <text x="268" y="323">+ updateStatus(s): void</text>
+
+              <!-- Host (1) --- (1..*) Room -->
+              <line x1="190" y1="290" x2="260" y2="290" stroke="#111" stroke-width="1.5"/>
+              <text x="196" y="284">1</text>
+              <text x="230" y="284">1..*</text>
+
+              <!-- Reservation (0..*) --- (1) Room -->
+              <line x1="355" y1="220" x2="355" y2="250" stroke="#111" stroke-width="1.5"/>
+              <text x="362" y="232">0..*</text>
+              <text x="362" y="247">1</text>
+
+              <!-- Payment (Composition with Reservation) -->
+              <polygon points="455,172 467,166 479,172 467,178" fill="#111"/>
+              <line x1="479" y1="172" x2="525" y2="172" stroke="#111" stroke-width="1.5"/>
+              <text x="482" y="165">1</text>
+              <text x="500" y="165">1..*</text>
+
+              <rect x="525" y="130" width="170" height="85" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="582" y="147" font-weight="bold">Payment</text>
+              <line x1="525" y1="153" x2="695" y2="153" stroke="#111"/>
+              <text x="532" y="168">- paymentId: String</text>
+              <text x="532" y="182">- paymentType: String</text>
+              <line x1="525" y1="188" x2="695" y2="188" stroke="#111"/>
+              <text x="532" y="203">+ process(): Boolean</text>
+
+              <!-- Service & Repository Layer -->
+              <rect x="260" y="15" width="215" height="80" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="320" y="30" font-size="10">&lt;&lt;service&gt;&gt;</text>
+              <text x="312" y="43" font-weight="bold">BookingService</text>
+              <line x1="260" y1="49" x2="475" y2="49" stroke="#111"/>
+              <text x="268" y="64">- roomRepo: IGenericRepository</text>
+              <line x1="260" y1="70" x2="475" y2="70" stroke="#111"/>
+              <text x="268" y="85">+ createBooking(): Reservation</text>
+
+              <!-- Dependency BookingService ..> IGenericRepository -->
+              <line x1="475" y1="55" x2="660" y2="55" stroke="#111" stroke-width="1.5" stroke-dasharray="6,4"/>
+              <polyline points="650,49 660,55 650,61" fill="none" stroke="#111" stroke-width="1.5"/>
+              <text x="530" y="47">&lt;&lt;use&gt;&gt;</text>
+
+              <!-- IGenericRepository<T> -->
+              <rect x="660" y="12" width="220" height="90" fill="#e9f8db" stroke="#111" stroke-width="1.5"/>
+              <text x="725" y="27" font-size="10">&lt;&lt;interface&gt;&gt;</text>
+              <text x="692" y="41" font-weight="bold">IGenericRepository&lt;T&gt;</text>
+              <line x1="660" y1="47" x2="880" y2="47" stroke="#111"/>
+              <text x="668" y="63">+ getById(id: String): T</text>
+              <text x="668" y="77">+ save(entity: T): Boolean</text>
+              <text x="668" y="91">+ updateStatus(id, st): void</text>
+
+              <!-- Realization triangles pointing to IGenericRepository -->
+              <polygon points="735,102 728,116 742,116" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <line x1="735" y1="116" x2="735" y2="245" stroke="#111" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+              <polygon points="825,102 818,116 832,116" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <line x1="825" y1="116" x2="825" y2="155" stroke="#111" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+              <!-- ReservationRepository -->
+              <rect x="745" y="155" width="145" height="65" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="752" y="175" font-weight="bold">ReservationRepo</text>
+              <line x1="745" y1="182" x2="890" y2="182" stroke="#111"/>
+              <text x="752" y="198">+ save(r): Boolean</text>
+
+              <!-- RoomRepository -->
+              <rect x="655" y="245" width="160" height="75" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="682" y="265" font-weight="bold">RoomRepository</text>
+              <line x1="655" y1="272" x2="815" y2="272" stroke="#111"/>
+              <text x="662" y="288">+ getById(id): Room</text>
+              <text x="662" y="304">+ updateStatus(): void</text>
+            </svg>
+          </div>
         </div>
 
         <!-- MODULE 02: SEQUENCE DIAGRAM -->
         <div id="mod-seq" class="module-panel">
-          <h3>02. Hướng dẫn vẽ Sequence Diagram (Xuất hiện 9/10 đề - 2.5 đến 4.0 điểm)</h3>
+          <h3>02. Hướng dẫn vẽ Sequence Diagram (Xuất hiện 10/11 đề - 2.5 đến 4.0 điểm)</h3>
           <p>File mẫu mở trong Draw.io Desktop: <a href="Templates_Hinh_Ve/02_Template_Sequence_Diagram_PE.drawio"><code>02_Template_Sequence_Diagram_PE.drawio</code></a></p>
 
+          <h4>Sơ đồ mẫu Sequence Diagram theo kiến trúc phân tầng (Đề StayEase Q2 - 4.0 điểm)</h4>
           <div class="svg-board">
-            <svg viewBox="0 0 880 330" width="100%" height="330" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
-              <rect x="5" y="5" width="870" height="320" fill="none" stroke="#111" stroke-width="1.5"/>
-              <polygon points="5,5 170,5 170,20 160,28 5,28" fill="#e9f0ea" stroke="#111" stroke-width="1.2"/>
-              <text x="12" y="21" font-weight="bold">sd Book And Pay Trip</text>
+            <svg viewBox="0 0 920 390" width="100%" height="390" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11">
+              <rect x="5" y="5" width="910" height="380" fill="none" stroke="#111" stroke-width="1.5"/>
+              <polygon points="5,5 210,5 210,20 200,28 5,28" fill="#e9f8db" stroke="#111" stroke-width="1.2"/>
+              <text x="12" y="21" font-weight="bold">sd StayEase Room Booking</text>
 
-              <rect x="30" y="40" width="90" height="30" fill="#fff" stroke="#111"/>
-              <text x="42" y="59" font-weight="bold">:Passenger</text>
-              <line x1="75" y1="70" x2="75" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+              <!-- Lifelines -->
+              <rect x="20" y="38" width="82" height="30" fill="#fff" stroke="#111"/>
+              <text x="28" y="57" font-weight="bold">:Customer</text>
+              <line x1="61" y1="68" x2="61" y2="370" stroke="#555" stroke-dasharray="5,4"/>
 
-              <rect x="175" y="40" width="100" height="30" fill="#fff" stroke="#111"/>
-              <text x="190" y="59" font-weight="bold">:BookingUI</text>
-              <line x1="225" y1="70" x2="225" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+              <rect x="135" y="38" width="95" height="30" fill="#fff" stroke="#111"/>
+              <text x="147" y="57" font-weight="bold">:BookingUI</text>
+              <line x1="182" y1="68" x2="182" y2="370" stroke="#555" stroke-dasharray="5,4"/>
 
-              <rect x="330" y="40" width="130" height="30" fill="#fff" stroke="#111"/>
-              <text x="340" y="59" font-weight="bold">:TripController</text>
-              <line x1="395" y1="70" x2="395" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+              <rect x="265" y="38" width="130" height="30" fill="#fff" stroke="#111"/>
+              <text x="273" y="57" font-weight="bold">:BookingController</text>
+              <line x1="330" y1="68" x2="330" y2="370" stroke="#555" stroke-dasharray="5,4"/>
 
-              <rect x="510" y="40" width="120" height="30" fill="#fff" stroke="#111"/>
-              <text x="525" y="59" font-weight="bold">:TripService</text>
-              <line x1="570" y1="70" x2="570" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+              <rect x="430" y="38" width="115" height="30" fill="#fff" stroke="#111"/>
+              <text x="442" y="57" font-weight="bold">:RoomRepo</text>
+              <line x1="487" y1="68" x2="487" y2="370" stroke="#555" stroke-dasharray="5,4"/>
 
-              <rect x="680" y="40" width="140" height="30" fill="#fff" stroke="#111"/>
-              <text x="692" y="59" font-weight="bold">:PaymentGateway</text>
-              <line x1="750" y1="70" x2="750" y2="310" stroke="#555" stroke-dasharray="5,4"/>
+              <rect x="580" y="38" width="125" height="30" fill="#fff" stroke="#111"/>
+              <text x="590" y="57" font-weight="bold">:PaymentService</text>
+              <line x1="642" y1="68" x2="642" y2="370" stroke="#555" stroke-dasharray="5,4"/>
 
-              <line x1="75" y1="92" x2="225" y2="92" stroke="#111" stroke-width="1.5"/>
-              <polygon points="225,92 216,87 216,97" fill="#111"/>
-              <text x="85" y="86">1: clickBookTrip(req)</text>
+              <rect x="740" y="38" width="150" height="30" fill="#fff" stroke="#111"/>
+              <text x="752" y="57" font-weight="bold">:ReservationRepo</text>
+              <line x1="815" y1="68" x2="815" y2="370" stroke="#555" stroke-dasharray="5,4"/>
 
-              <line x1="225" y1="116" x2="395" y2="116" stroke="#111" stroke-width="1.5"/>
-              <polygon points="395,116 386,111 386,121" fill="#111"/>
-              <text x="235" y="110">1.1: POST /trips(dto)</text>
+              <!-- Step 1 -->
+              <line x1="61" y1="88" x2="182" y2="88" stroke="#111" stroke-width="1.5"/>
+              <polygon points="182,88 173,83 173,93" fill="#111"/>
+              <text x="68" y="82">1: submitBooking(roomId, dates)</text>
 
-              <line x1="395" y1="140" x2="570" y2="140" stroke="#111" stroke-width="1.5"/>
-              <polygon points="570,140 561,135 561,145" fill="#111"/>
-              <text x="405" y="134">1.1.1: createAndPay(dto)</text>
+              <line x1="182" y1="110" x2="330" y2="110" stroke="#111" stroke-width="1.5"/>
+              <polygon points="330,110 321,105 321,115" fill="#111"/>
+              <text x="192" y="104">1.1: bookRoom(roomId, dates)</text>
 
-              <line x1="570" y1="164" x2="750" y2="164" stroke="#111" stroke-width="1.5"/>
-              <polygon points="750,164 741,159 741,169" fill="#111"/>
-              <text x="580" y="158">1.1.1.1: charge(amount)</text>
+              <line x1="330" y1="132" x2="487" y2="132" stroke="#111" stroke-width="1.5"/>
+              <polygon points="487,132 478,127 478,137" fill="#111"/>
+              <text x="340" y="126">1.1.1: getByIdAndCheckDates()</text>
 
-              <rect x="155" y="182" width="675" height="122" fill="none" stroke="#111" stroke-width="1.3"/>
-              <polygon points="155,182 200,182 200,196 192,202 155,202" fill="#e9f0ea" stroke="#111"/>
-              <text x="162" y="196" font-weight="bold">alt</text>
-              <text x="215" y="197" font-weight="bold">[paymentStatus == SUCCESS]</text>
+              <line x1="487" y1="152" x2="330" y2="152" stroke="#111" stroke-dasharray="5,4"/>
+              <text x="355" y="147">1.1.2: return roomStatus</text>
 
-              <line x1="750" y1="218" x2="570" y2="218" stroke="#111" stroke-width="1.3" stroke-dasharray="5,4"/>
-              <polyline points="579,213 570,218 579,223" fill="none" stroke="#111" stroke-width="1.3"/>
-              <text x="595" y="212">1.1.1.2: return receipt</text>
+              <!-- Outer alt: Room Availability -->
+              <rect x="120" y="164" width="780" height="205" fill="none" stroke="#111" stroke-width="1.4"/>
+              <polygon points="120,164 165,164 165,178 157,184 120,184" fill="#e9f8db" stroke="#111"/>
+              <text x="127" y="178" font-weight="bold">alt</text>
+              <text x="178" y="178" font-weight="bold">[roomStatus == AVAILABLE]</text>
 
-              <line x1="570" y1="240" x2="225" y2="240" stroke="#111" stroke-width="1.3" stroke-dasharray="5,4"/>
-              <polyline points="234,235 225,240 234,245" fill="none" stroke="#111" stroke-width="1.3"/>
-              <text x="310" y="234">1.1.2: return 200 OK (TripConfirmed)</text>
+              <line x1="330" y1="196" x2="642" y2="196" stroke="#111" stroke-width="1.5"/>
+              <polygon points="642,196 633,191 633,201" fill="#111"/>
+              <text x="350" y="190">1.1.3: processDepositPayment(amount)</text>
 
-              <line x1="155" y1="256" x2="830" y2="256" stroke="#111" stroke-dasharray="6,4"/>
-              <text x="215" y="271" font-weight="bold">[else: payment failed]</text>
+              <!-- Inner alt: Payment Status -->
+              <rect x="145" y="210" width="740" height="115" fill="none" stroke="#333" stroke-width="1.2"/>
+              <polygon points="145,210 185,210 185,222 178,228 145,228" fill="#eee" stroke="#333"/>
+              <text x="150" y="223" font-weight="bold">alt</text>
+              <text x="195" y="223" font-weight="bold">[paymentResult == SUCCESS]</text>
 
-              <line x1="750" y1="292" x2="225" y2="292" stroke="#111" stroke-width="1.3" stroke-dasharray="5,4"/>
-              <polyline points="234,287 225,292 234,297" fill="none" stroke="#111" stroke-width="1.3"/>
-              <text x="350" y="286">1.1.3: return 402 PaymentFailedError</text>
+              <line x1="330" y1="242" x2="815" y2="242" stroke="#111" stroke-width="1.5"/>
+              <polygon points="815,242 806,237 806,247" fill="#111"/>
+              <text x="495" y="236">1.1.4: save(newReservation)</text>
+
+              <line x1="330" y1="264" x2="487" y2="264" stroke="#111" stroke-width="1.5"/>
+              <polygon points="487,264 478,259 478,269" fill="#111"/>
+              <text x="340" y="258">1.1.5: updateStatus(roomId, "Booked")</text>
+
+              <line x1="330" y1="284" x2="182" y2="284" stroke="#111" stroke-dasharray="5,4"/>
+              <text x="195" y="279">1.1.6: return BookingConfirmed</text>
+
+              <line x1="145" y1="293" x2="885" y2="293" stroke="#333" stroke-dasharray="6,4"/>
+              <text x="195" y="306" font-weight="bold">[else: Deposit Payment Failed]</text>
+              <line x1="330" y1="318" x2="182" y2="318" stroke="#111" stroke-dasharray="5,4"/>
+              <text x="195" y="314">1.1.7: return PaymentErrorMsg</text>
+
+              <!-- Outer else: Room Occupied -->
+              <line x1="120" y1="336" x2="900" y2="336" stroke="#111" stroke-dasharray="6,4"/>
+              <text x="178" y="350" font-weight="bold">[else: Room Occupied / Unavailable]</text>
+              <line x1="330" y1="362" x2="182" y2="362" stroke="#111" stroke-dasharray="5,4"/>
+              <text x="195" y="358">1.1.8: return RoomUnavailableError</text>
             </svg>
           </div>
-
-          <h4>Các điểm bắt buộc phải có</h4>
-          <ul style="margin-left:20px;">
-            <li>Sắp xếp đúng thứ tự Lifeline từ trái sang phải: <code>Actor &gt; UI/View &gt; Controller &gt; Service &gt; Repository / External Gateway &gt; Database</code>.</li>
-            <li>Đánh số thứ tự phân cấp cho mọi lời gọi: <code>1</code>, <code>1.1</code>, <code>1.1.1</code>, <code>1.1.2</code>.</li>
-            <li>Bắt buộc có khung <code>alt [điều kiện thành công] / [else: điều kiện thất bại]</code> và mũi tên trả về dùng <strong>nét đứt</strong>.</li>
-          </ul>
         </div>
 
-        <!-- MODULE 03: STATE MACHINE & ACTIVITY -->
+        <!-- MODULE 03: STATE MACHINE & ACTIVITY (DETAILED REAL SYMBOLS + STAYEASE EXAMPLE) -->
         <div id="mod-state" class="module-panel">
-          <h3>03. State Machine Diagram (50% đề) &amp; Activity Swimlanes (40% đề)</h3>
-          <p>File mẫu: <a href="Templates_Hinh_Ve/03_Template_Statechart_Diagram_PE.drawio"><code>03_Template_Statechart_Diagram_PE.drawio</code></a> và <a href="Templates_Hinh_Ve/04_Template_Activity_Diagram_Swimlanes_PE.drawio"><code>04_Template_Activity_Diagram_Swimlanes_PE.drawio</code></a></p>
+          <h3>03. State Machine Diagram &amp; Activity Swimlanes (Bảng Ký Hiệu Hình Thật Chi Tiết)</h3>
+          <p>File mẫu mở trong Draw.io Desktop: <a href="Templates_Hinh_Ve/03_Template_Statechart_Diagram_PE.drawio"><code>03_Template_Statechart_Diagram_PE.drawio</code></a> và <a href="Templates_Hinh_Ve/04_Template_Activity_Diagram_Swimlanes_PE.drawio"><code>04_Template_Activity_Diagram_Swimlanes_PE.drawio</code></a></p>
 
+          <h4>A. Bảng Ký Hiệu Hình Thật Chuẩn UML 2.5 (State Machine &amp; Activity Diagram)</h4>
           <div class="svg-board">
-            <svg viewBox="0 0 860 195" width="100%" height="195" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
-              <circle cx="35" cy="85" r="11" fill="#111"/>
-              <line x1="46" y1="85" x2="105" y2="85" stroke="#111" stroke-width="1.6"/>
-              <polygon points="105,85 96,80 96,90" fill="#111"/>
-              <text x="50" y="75">create()</text>
+            <svg viewBox="0 0 900 320" width="100%" height="320" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
+              <!-- Column Headers -->
+              <rect x="10" y="10" width="430" height="28" fill="#111312"/>
+              <text x="22" y="28" fill="#88f724" font-weight="bold">KÝ HIỆU STATE MACHINE DIAGRAM (VÒNG ĐỜI 1 OBJECT)</text>
 
-              <rect x="105" y="60" width="120" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="1.6"/>
-              <text x="132" y="89" font-weight="bold">Requested</text>
+              <rect x="460" y="10" width="430" height="28" fill="#111312"/>
+              <text x="472" y="28" fill="#88f724" font-weight="bold">KÝ HIỆU ACTIVITY DIAGRAM (QUY TRÌNH SWIMLANES)</text>
 
-              <line x1="225" y1="85" x2="345" y2="85" stroke="#111" stroke-width="1.6"/>
-              <polygon points="345,85 336,80 336,90" fill="#111"/>
-              <text x="235" y="66">assignDriver()</text>
-              <text x="235" y="79">[driverFound]</text>
+              <!-- Left 1: Initial Pseudostate -->
+              <circle cx="55" cy="68" r="11" fill="#111"/>
+              <line x1="66" y1="68" x2="105" y2="68" stroke="#111" stroke-width="1.6"/>
+              <polygon points="105,68 96,63 96,73" fill="#111"/>
+              <text x="125" y="64" font-weight="bold">1. Initial State (Trạng thái khởi đầu)</text>
+              <text x="125" y="80" fill="#555">Chấm tròn đặc màu đen (chỉ có 1 điểm bắt đầu)</text>
 
-              <rect x="345" y="60" width="120" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="1.6"/>
-              <text x="368" y="89" font-weight="bold">Assigned</text>
+              <!-- Left 2: State with compartments -->
+              <rect x="25" y="102" width="145" height="72" rx="12" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="58" y="120" font-weight="bold">InConsultation</text>
+              <line x1="25" y1="126" x2="170" y2="126" stroke="#111"/>
+              <text x="32" y="141" font-size="10">entry / logStartTime()</text>
+              <text x="32" y="154" font-size="10">do / examinePatient()</text>
+              <text x="32" y="167" font-size="10">exit / saveDraft()</text>
+              <text x="182" y="125" font-weight="bold">2. State (Trạng thái của đối tượng)</text>
+              <text x="182" y="142" fill="#555">Hình chữ nhật bo góc. Tên phải là TÍNH TỪ</text>
+              <text x="182" y="157" fill="#555">hoặc trạng thái (Booked, Cleaning, Completed).</text>
 
-              <line x1="465" y1="85" x2="575" y2="85" stroke="#111" stroke-width="1.6"/>
-              <polygon points="575,85 566,80 566,90" fill="#111"/>
-              <text x="478" y="78">startTrip()</text>
+              <!-- Left 3: Transition -->
+              <line x1="25" y1="212" x2="165" y2="212" stroke="#111" stroke-width="1.6"/>
+              <polyline points="154,206 165,212 154,218" fill="none" stroke="#111" stroke-width="1.6"/>
+              <text x="28" y="202" font-size="10.5" font-weight="bold">pay() [amountValid] / issueReceipt()</text>
+              <text x="182" y="208" font-weight="bold">3. Transition (Mũi tên chuyển trạng thái)</text>
+              <text x="182" y="224" fill="#555">Cú pháp: event [guard_điều_kiện] / action</text>
 
-              <rect x="575" y="60" width="120" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="1.6"/>
-              <text x="598" y="89" font-weight="bold">InProgress</text>
+              <!-- Left 4: Final State -->
+              <circle cx="55" cy="272" r="13" fill="none" stroke="#111" stroke-width="1.6"/>
+              <circle cx="55" cy="272" r="7.5" fill="#111"/>
+              <text x="125" y="268" font-weight="bold">4. Final State (Trạng thái kết thúc)</text>
+              <text x="125" y="284" fill="#555">Vòng tròn rỗng bao ngoài chấm tròn đen đặc</text>
 
-              <line x1="695" y1="85" x2="785" y2="45" stroke="#111" stroke-width="1.6"/>
-              <text x="695" y="52">complete() [paid]</text>
+              <!-- Right 1: Action Node -->
+              <rect x="475" y="52" width="125" height="36" rx="16" fill="#f8faf8" stroke="#111" stroke-width="1.6"/>
+              <text x="488" y="74" font-weight="bold">Inspect Room</text>
+              <text x="615" y="65" font-weight="bold">1. Action Node (Hành động)</text>
+              <text x="615" y="81" fill="#555">Bo tròn 2 đầu, ghi ĐỘNG TỪ + TÂN NGỮ</text>
 
-              <rect x="740" y="10" width="105" height="40" rx="10" fill="#e9f8db" stroke="#111" stroke-width="1.6"/>
-              <text x="758" y="34" font-weight="bold">Completed</text>
+              <!-- Right 2: Decision & Merge Diamond -->
+              <polygon points="535,105 565,128 535,151 505,128" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <line x1="565" y1="128" x2="600" y2="128" stroke="#111" stroke-width="1.4"/>
+              <text x="568" y="122" font-size="10">[Damage]</text>
+              <line x1="535" y1="151" x2="535" y2="172" stroke="#111" stroke-width="1.4"/>
+              <text x="540" y="166" font-size="10">[No Damage]</text>
+              <text x="615" y="124" font-weight="bold">2. Decision / Merge Node (Rẽ nhánh)</text>
+              <text x="615" y="140" fill="#555">Hình thoi rỗng, mỗi nhánh ra bắt buộc</text>
+              <text x="615" y="155" fill="#555">phải có điều kiện trong ngoặc vuông [...]</text>
 
-              <rect x="345" y="140" width="120" height="40" rx="10" fill="#fde8e8" stroke="#111" stroke-width="1.6"/>
-              <text x="372" y="164" font-weight="bold">Cancelled</text>
+              <!-- Right 3: Fork & Join Bar -->
+              <rect x="485" y="205" width="105" height="6" fill="#111"/>
+              <line x1="537" y1="185" x2="537" y2="205" stroke="#111" stroke-width="1.5"/>
+              <line x1="508" y1="211" x2="508" y2="235" stroke="#111" stroke-width="1.5"/>
+              <line x1="566" y1="211" x2="566" y2="235" stroke="#111" stroke-width="1.5"/>
+              <text x="615" y="206" font-weight="bold">3. Fork / Join Bar (Xử lý song song)</text>
+              <text x="615" y="222" fill="#555">Thanh ngang đen dày: tách 1 luồng thành</text>
+              <text x="615" y="237" fill="#555">2 luồng chạy đồng thời rồi gộp lại.</text>
 
-              <line x1="165" y1="110" x2="345" y2="160" stroke="#111" stroke-width="1.4"/>
-              <text x="190" y="152">cancel()</text>
-              <line x1="405" y1="110" x2="405" y2="140" stroke="#111" stroke-width="1.4"/>
-              <text x="412" y="130">cancel()</text>
-
-              <circle cx="815" cy="160" r="12" fill="none" stroke="#111" stroke-width="1.6"/>
-              <circle cx="815" cy="160" r="7" fill="#111"/>
-              <line x1="465" y1="160" x2="803" y2="160" stroke="#111" stroke-width="1.5"/>
-              <line x1="815" y1="50" x2="815" y2="148" stroke="#111" stroke-width="1.5"/>
+              <!-- Right 4: Swimlanes -->
+              <rect x="485" y="255" width="52" height="48" fill="none" stroke="#111" stroke-width="1.4"/>
+              <rect x="537" y="255" width="52" height="48" fill="none" stroke="#111" stroke-width="1.4"/>
+              <line x1="485" y1="270" x2="589" y2="270" stroke="#111"/>
+              <text x="497" y="266" font-size="9.5" font-weight="bold">Host</text>
+              <text x="545" y="266" font-size="9.5" font-weight="bold">System</text>
+              <text x="615" y="272" font-weight="bold">4. Swimlanes (Phân làn trách nhiệm)</text>
+              <text x="615" y="288" fill="#555">Chia cột theo từng Actor / Component.</text>
             </svg>
           </div>
 
-          <div class="data-table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Tiêu chí phân biệt</th>
-                  <th>State Machine Diagram</th>
-                  <th>Activity Diagram (Swimlanes)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Đối tượng mô tả</strong></td>
-                  <td>Vòng đời của <strong>1 thực thể duy nhất</strong> (<code>Trip</code>, <code>Appointment</code>, <code>Registration</code>).</td>
-                  <td>Luồng công việc đi qua <strong>nhiều cột tác nhân</strong> (Customer, System, Payment Gateway).</td>
-                </tr>
-                <tr>
-                  <td><strong>Từ loại trong ô bo góc</strong></td>
-                  <td><strong>Tính từ / Phân từ trạng thái:</strong> <code>Pending</code>, <code>Confirmed</code>, <code>Completed</code>.</td>
-                  <td><strong>Động từ hành động:</strong> <code>Select Item</code>, <code>Validate Stock</code>, <code>Process Payment</code>.</td>
-                </tr>
-              </tbody>
-            </table>
+          <h4>B. Sơ đồ mẫu 1: Activity Diagram có Swimlanes (Giải chi tiết Câu 3 Đề StayEase - Check-out &amp; Inspection - 3.0 điểm)</h4>
+          <div class="svg-board">
+            <svg viewBox="0 0 900 470" width="100%" height="470" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11">
+              <!-- 3 Swimlanes: Host | StayEase System | Guest -->
+              <rect x="15" y="10" width="280" height="450" fill="none" stroke="#111" stroke-width="1.5"/>
+              <rect x="15" y="10" width="280" height="32" fill="#e9f0ea" stroke="#111" stroke-width="1.5"/>
+              <text x="75" y="30" font-weight="bold">Host (Property Owner)</text>
+
+              <rect x="295" y="10" width="360" height="450" fill="none" stroke="#111" stroke-width="1.5"/>
+              <rect x="295" y="10" width="360" height="32" fill="#e9f8db" stroke="#111" stroke-width="1.5"/>
+              <text x="415" y="30" font-weight="bold">StayEase System</text>
+
+              <rect x="655" y="10" width="230" height="450" fill="none" stroke="#111" stroke-width="1.5"/>
+              <rect x="655" y="10" width="230" height="32" fill="#e9f0ea" stroke="#111" stroke-width="1.5"/>
+              <text x="715" y="30" font-weight="bold">Guest (Customer)</text>
+
+              <!-- Start node in Host lane -->
+              <circle cx="155" cy="62" r="10" fill="#111"/>
+              <line x1="155" y1="72" x2="155" y2="95" stroke="#111" stroke-width="1.5"/>
+              <polygon points="155,95 150,87 160,87" fill="#111"/>
+
+              <!-- Step 1: Inspect Room -->
+              <rect x="65" y="95" width="180" height="36" rx="16" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="80" y="117" font-weight="bold">Inspect Room Condition</text>
+              <line x1="155" y1="131" x2="155" y2="155" stroke="#111" stroke-width="1.5"/>
+              <polygon points="155,155 150,147 160,147" fill="#111"/>
+
+              <!-- Step 2: Enter Inspection Results -->
+              <rect x="55" y="155" width="200" height="36" rx="16" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="70" y="177" font-weight="bold">Enter Inspection Results</text>
+
+              <!-- Arrow to System: Evaluate Inspection Report -->
+              <line x1="255" y1="173" x2="385" y2="173" stroke="#111" stroke-width="1.5"/>
+              <polygon points="385,173 377,168 377,178" fill="#111"/>
+
+              <rect x="385" y="155" width="190" height="36" rx="16" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="398" y="177" font-weight="bold">Evaluate Inspection Report</text>
+
+              <!-- Decision Diamond: Damage Found? -->
+              <line x1="480" y1="191" x2="480" y2="212" stroke="#111" stroke-width="1.5"/>
+              <polygon points="480,212 508,232 480,252 452,232" fill="#fff" stroke="#111" stroke-width="1.6"/>
+
+              <!-- Branch Yes (Damage Found) -->
+              <line x1="452" y1="232" x2="380" y2="232" stroke="#111" stroke-width="1.5"/>
+              <line x1="380" y1="232" x2="380" y2="262" stroke="#111" stroke-width="1.5"/>
+              <text x="355" y="225" font-size="10" font-weight="bold">[Damage Found]</text>
+              <rect x="308" y="262" width="155" height="40" rx="14" fill="#fde8e8" stroke="#111" stroke-width="1.4"/>
+              <text x="318" y="279" font-weight="bold">Add Damage Fee to</text>
+              <text x="335" y="293" font-weight="bold">Final Invoice</text>
+
+              <!-- Branch No (No Damage) -->
+              <line x1="508" y1="232" x2="575" y2="232" stroke="#111" stroke-width="1.5"/>
+              <line x1="575" y1="232" x2="575" y2="262" stroke="#111" stroke-width="1.5"/>
+              <text x="515" y="225" font-size="10" font-weight="bold">[No Damage]</text>
+              <rect x="492" y="262" width="152" height="40" rx="14" fill="#e9f8db" stroke="#111" stroke-width="1.4"/>
+              <text x="505" y="279" font-weight="bold">Generate Standard</text>
+              <text x="518" y="293" font-weight="bold">Final Invoice</text>
+
+              <!-- Merge back -->
+              <line x1="380" y1="302" x2="380" y2="322" stroke="#111" stroke-width="1.4"/>
+              <line x1="575" y1="302" x2="575" y2="322" stroke="#111" stroke-width="1.4"/>
+              <line x1="380" y1="322" x2="575" y2="322" stroke="#111" stroke-width="1.4"/>
+              <line x1="480" y1="322" x2="155" y2="322" stroke="#111" stroke-width="1.5"/>
+              <line x1="155" y1="322" x2="155" y2="340" stroke="#111" stroke-width="1.5"/>
+
+              <!-- Step 4: Host requests payment -> Guest settles payment -->
+              <rect x="60" y="340" width="190" height="34" rx="15" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="75" y="361" font-weight="bold">Request Guest Payment</text>
+
+              <line x1="250" y1="357" x2="680" y2="357" stroke="#111" stroke-width="1.5"/>
+              <polygon points="680,357 672,352 672,362" fill="#111"/>
+
+              <rect x="680" y="340" width="180" height="34" rx="15" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="702" y="361" font-weight="bold">Settle Final Payment</text>
+
+              <!-- Step 5: Fork Bar in System to update Reservation & Room statuses -->
+              <line x1="770" y1="374" x2="770" y2="388" stroke="#111" stroke-width="1.5"/>
+              <line x1="770" y1="388" x2="480" y2="388" stroke="#111" stroke-width="1.5"/>
+              <rect x="355" y="385" width="240" height="5" fill="#111"/>
+
+              <line x1="395" y1="390" x2="395" y2="404" stroke="#111" stroke-width="1.5"/>
+              <line x1="555" y1="390" x2="555" y2="404" stroke="#111" stroke-width="1.5"/>
+
+              <rect x="310" y="404" width="165" height="32" rx="12" fill="#fff" stroke="#111" stroke-width="1.4"/>
+              <text x="318" y="424" font-size="10" font-weight="bold">Reservation = "Completed"</text>
+
+              <rect x="490" y="404" width="150" height="32" rx="12" fill="#fff" stroke="#111" stroke-width="1.4"/>
+              <text x="505" y="424" font-size="10" font-weight="bold">Room = "Cleaning"</text>
+
+              <!-- Join Bar & Final Node -->
+              <line x1="395" y1="436" x2="395" y2="446" stroke="#111" stroke-width="1.5"/>
+              <line x1="555" y1="436" x2="555" y2="446" stroke="#111" stroke-width="1.5"/>
+              <rect x="355" y="446" width="240" height="5" fill="#111"/>
+
+              <line x1="595" y1="448" x2="755" y2="448" stroke="#111" stroke-width="1.5"/>
+              <circle cx="770" cy="448" r="10" fill="none" stroke="#111" stroke-width="1.6"/>
+              <circle cx="770" cy="448" r="6" fill="#111"/>
+            </svg>
           </div>
         </div>
 
-        <!-- MODULE 04: ERD & USE CASE -->
+        <!-- MODULE 04: ERD & USE CASE (DETAILED REAL SYMBOLS + VISUAL EXAMPLES) -->
         <div id="mod-erd" class="module-panel">
-          <h3>04. ERD (Chen vs Crow's Foot) &amp; Use Case Diagram</h3>
-          <p>File mẫu: <a href="Templates_Hinh_Ve/05_Template_ERD_Conceptual_And_Logical_PE.drawio"><code>05_Template_ERD_Conceptual_And_Logical_PE.drawio</code></a> và <a href="Templates_Hinh_Ve/06_Template_UseCase_Diagram_PE.drawio"><code>06_Template_UseCase_Diagram_PE.drawio</code></a></p>
+          <h3>04. ERD (Chen vs Crow's Foot) &amp; Use Case Diagram (Bảng Ký Hiệu Hình Thật Chi Tiết)</h3>
+          <p>File mẫu mở trong Draw.io Desktop: <a href="Templates_Hinh_Ve/05_Template_ERD_Conceptual_And_Logical_PE.drawio"><code>05_Template_ERD_Conceptual_And_Logical_PE.drawio</code></a> và <a href="Templates_Hinh_Ve/06_Template_UseCase_Diagram_PE.drawio"><code>06_Template_UseCase_Diagram_PE.drawio</code></a></p>
 
-          <div class="data-table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Loại sơ đồ</th>
-                  <th>Ký hiệu bắt buộc</th>
-                  <th>Điều tuyệt đối tránh</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Conceptual ERD (Chen's Notation)</strong><br><em>(Đề Student Management, SmartHome)</em></td>
-                  <td>Hình chữ nhật (Entity), Hình Elip (Attribute, gạch chân PK), Hình thoi (Relationship) ghi <code>1</code>, <code>N</code>, <code>M</code>.</td>
-                  <td><span class="badge-pill badge-danger">CẤM GHI FK &amp; KIỂU DỮ LIỆU</span><br>Không tách bảng trung gian cho quan hệ N-N.</td>
-                </tr>
-                <tr>
-                  <td><strong>Logical ERD (Crow's Foot)</strong><br><em>(Đề Cinema Management)</em></td>
-                  <td>Bảng có ngăn <code>PK</code>, <code>FK</code>; đầu dây chân chim (<code>||</code>, <code>o|</code>, <code>|&lt;</code>, <code>o&lt;</code>).</td>
-                  <td><span class="badge-pill badge-danger">CẤM ĐỂ NGUYÊN QUAN HỆ N-N</span><br>Phải tách N-N thành bảng trung gian có 2 FK.</td>
-                </tr>
-                <tr>
-                  <td><strong>Use Case Diagram</strong><br><em>(Đề Cinema, Food Delivery)</em></td>
-                  <td>Actor ở ngoài khung System Boundary; <code>&lt;&lt;include&gt;&gt;</code> trỏ từ Chính sang Phụ; <code>&lt;&lt;extend&gt;&gt;</code> trỏ từ Phụ về Chính.</td>
-                  <td><span class="badge-pill badge-danger">CẤM GỘP CRUD / MANAGE X</span><br>Phải tách thành các chức năng cụ thể.</td>
-                </tr>
-              </tbody>
-            </table>
+          <h4>A. Bảng Ký Hiệu Hình Thật: Chen's Conceptual ERD vs Crow's Foot Logical ERD</h4>
+          <div class="svg-board">
+            <svg viewBox="0 0 900 310" width="100%" height="310" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
+              <!-- Headers -->
+              <rect x="10" y="10" width="430" height="28" fill="#111312"/>
+              <text x="20" y="28" fill="#88f724" font-weight="bold">1. CHEN'S NOTATION (CONCEPTUAL ERD - KHÔNG FK)</text>
+
+              <rect x="460" y="10" width="430" height="28" fill="#111312"/>
+              <text x="470" y="28" fill="#88f724" font-weight="bold">2. CROW'S FOOT NOTATION (LOGICAL ERD - CÓ PK/FK)</text>
+
+              <!-- Chen 1: Strong Entity & Weak Entity -->
+              <rect x="22" y="52" width="110" height="34" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="48" y="73" font-weight="bold">STUDENT</text>
+              <text x="150" y="65" font-weight="bold">Entity (Thực thể mạnh)</text>
+              <text x="150" y="80" fill="#555">Hình chữ nhật đơn, viết IN HOA</text>
+
+              <!-- Chen 2: Key Attribute & Normal Attribute -->
+              <ellipse cx="77" cy="118" rx="55" ry="18" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="44" y="122" font-weight="bold" text-decoration="underline">student_id</text>
+              <text x="150" y="114" font-weight="bold">Key Attribute (Khóa chính)</text>
+              <text x="150" y="129" fill="#555">Hình Elip có GẠCH CHÂN tên thuộc tính</text>
+
+              <!-- Chen 3: Multivalued & Derived Attribute -->
+              <ellipse cx="77" cy="168" rx="55" ry="18" fill="#fff" stroke="#111" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <text x="42" y="172">total_gpa</text>
+              <text x="150" y="164" font-weight="bold">Derived Attribute (Thuộc tính suy diễn)</text>
+              <text x="150" y="179" fill="#555">Hình Elip nét đứt (tính toán từ cột khác)</text>
+
+              <!-- Chen 4: Relationship Diamond -->
+              <polygon points="77,202 132,226 77,250 22,226" fill="#e9f8db" stroke="#111" stroke-width="1.6"/>
+              <text x="52" y="230" font-weight="bold">ENROLLS</text>
+              <text x="150" y="220" font-weight="bold">Relationship (Mối quan hệ)</text>
+              <text x="150" y="236" fill="#555">Hình thoi nối giữa 2 Entity, ghi 1, N, M</text>
+
+              <!-- Chen Diagram Mini Sample -->
+              <text x="22" y="282" fill="#c81e1e" font-weight="bold">Lưu ý Chen's ERD: KHÔNG vẽ bảng FK, KHÔNG ghi int/varchar!</text>
+
+              <!-- Crow's Foot 1: Mandatory One (||) -->
+              <line x1="475" y1="68" x2="585" y2="68" stroke="#111" stroke-width="1.8"/>
+              <line x1="565" y1="56" x2="565" y2="80" stroke="#111" stroke-width="2"/>
+              <line x1="576" y1="56" x2="576" y2="80" stroke="#111" stroke-width="2"/>
+              <text x="605" y="64" font-weight="bold">Mandatory One (Chỉ 1 và bắt buộc)</text>
+              <text x="605" y="80" fill="#555">Hai vạch dọc song song (1..1)</text>
+
+              <!-- Crow's Foot 2: Optional One (o|) -->
+              <line x1="475" y1="120" x2="585" y2="120" stroke="#111" stroke-width="1.8"/>
+              <circle cx="556" cy="120" r="6" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <line x1="574" y1="108" x2="574" y2="132" stroke="#111" stroke-width="2"/>
+              <text x="605" y="116" font-weight="bold">Optional One (0 hoặc 1)</text>
+              <text x="605" y="132" fill="#555">Vòng tròn + 1 vạch dọc (0..1)</text>
+
+              <!-- Crow's Foot 3: Mandatory Many (|<) -->
+              <line x1="475" y1="175" x2="585" y2="175" stroke="#111" stroke-width="1.8"/>
+              <line x1="558" y1="162" x2="558" y2="188" stroke="#111" stroke-width="2"/>
+              <line x1="565" y1="175" x2="585" y2="162" stroke="#111" stroke-width="1.8"/>
+              <line x1="565" y1="175" x2="585" y2="188" stroke="#111" stroke-width="1.8"/>
+              <text x="605" y="171" font-weight="bold">Mandatory Many (1 hoặc nhiều)</text>
+              <text x="605" y="187" fill="#555">Một vạch dọc + chân chim 3 nhánh (1..*)</text>
+
+              <!-- Crow's Foot 4: Optional Many (o<) -->
+              <line x1="475" y1="230" x2="585" y2="230" stroke="#111" stroke-width="1.8"/>
+              <circle cx="552" cy="230" r="6" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <line x1="565" y1="230" x2="585" y2="217" stroke="#111" stroke-width="1.8"/>
+              <line x1="565" y1="230" x2="585" y2="243" stroke="#111" stroke-width="1.8"/>
+              <text x="605" y="226" font-weight="bold">Optional Many (0 hoặc nhiều)</text>
+              <text x="605" y="242" fill="#555">Vòng tròn + chân chim 3 nhánh (0..*)</text>
+
+              <text x="475" y="282" fill="#2f6800" font-weight="bold">Lưu ý Crow's Foot: Quan hệ N-N phải tách thành Bảng Trung Gian!</text>
+            </svg>
+          </div>
+
+          <h4>B. Sơ đồ mẫu hoàn chỉnh: Chen's Conceptual ERD vs Crow's Foot Logical ERD</h4>
+          <div class="svg-board">
+            <svg viewBox="0 0 900 240" width="100%" height="240" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11">
+              <!-- Left side: Complete Chen's ERD -->
+              <text x="15" y="20" font-weight="bold">MẪU CHEN'S CONCEPTUAL ERD (STUDENT - COURSE)</text>
+
+              <ellipse cx="48" cy="55" rx="40" ry="15" fill="#fff" stroke="#111"/>
+              <text x="20" y="59" text-decoration="underline" font-weight="bold">studentId</text>
+              <line x1="60" y1="70" x2="80" y2="105" stroke="#111"/>
+
+              <ellipse cx="135" cy="55" rx="40" ry="15" fill="#fff" stroke="#111"/>
+              <text x="110" y="59">fullName</text>
+              <line x1="125" y1="70" x2="105" y2="105" stroke="#111"/>
+
+              <rect x="45" y="105" width="95" height="36" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="65" y="127" font-weight="bold">STUDENT</text>
+
+              <line x1="140" y1="123" x2="185" y2="123" stroke="#111" stroke-width="1.5"/>
+              <text x="155" y="116" font-weight="bold">M</text>
+
+              <polygon points="185,123 230,98 275,123 230,148" fill="#e9f8db" stroke="#111" stroke-width="1.6"/>
+              <text x="205" y="127" font-weight="bold">ENROLLS</text>
+
+              <!-- Relationship attribute grade -->
+              <line x1="230" y1="148" x2="230" y2="180" stroke="#111"/>
+              <ellipse cx="230" cy="195" rx="38" ry="15" fill="#fff" stroke="#111"/>
+              <text x="212" y="199">grade</text>
+
+              <line x1="275" y1="123" x2="320" y2="123" stroke="#111" stroke-width="1.5"/>
+              <text x="292" y="116" font-weight="bold">N</text>
+
+              <rect x="320" y="105" width="95" height="36" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="342" y="127" font-weight="bold">COURSE</text>
+
+              <ellipse cx="368" cy="55" rx="42" ry="15" fill="#fff" stroke="#111"/>
+              <text x="340" y="59" text-decoration="underline" font-weight="bold">courseId</text>
+              <line x1="368" y1="70" x2="368" y2="105" stroke="#111"/>
+
+              <!-- Divider -->
+              <line x1="445" y1="10" x2="445" y2="230" stroke="#ccc" stroke-dasharray="5,4"/>
+
+              <!-- Right side: Complete Crow's Foot Logical ERD -->
+              <text x="465" y="20" font-weight="bold">MẪU CROW'S FOOT LOGICAL ERD (ĐÃ TÁCH BẢNG TRUNG GIAN)</text>
+
+              <!-- Table STUDENT -->
+              <rect x="465" y="65" width="120" height="90" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <rect x="465" y="65" width="120" height="24" fill="#e9f0ea" stroke="#111"/>
+              <text x="498" y="81" font-weight="bold">STUDENT</text>
+              <text x="472" y="105" font-weight="bold">PK student_id</text>
+              <line x1="465" y1="112" x2="585" y2="112" stroke="#ccc"/>
+              <text x="472" y="128">   full_name</text>
+              <text x="472" y="144">   email</text>
+
+              <!-- 1 to 0..* line from STUDENT to ENROLLMENT -->
+              <line x1="585" y1="110" x2="630" y2="110" stroke="#111" stroke-width="1.6"/>
+              <line x1="593" y1="100" x2="593" y2="120" stroke="#111" stroke-width="1.8"/>
+              <line x1="600" y1="100" x2="600" y2="120" stroke="#111" stroke-width="1.8"/>
+              <circle cx="614" cy="110" r="4.5" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <line x1="620" y1="110" x2="630" y2="101" stroke="#111" stroke-width="1.6"/>
+              <line x1="620" y1="110" x2="630" y2="119" stroke="#111" stroke-width="1.6"/>
+
+              <!-- Associative Table ENROLLMENT -->
+              <rect x="630" y="55" width="125" height="110" fill="#e9f8db" stroke="#111" stroke-width="1.5"/>
+              <rect x="630" y="55" width="125" height="24" fill="#111" stroke="#111"/>
+              <text x="652" y="71" fill="#88f724" font-weight="bold">ENROLLMENT</text>
+              <text x="636" y="95" font-weight="bold">PK,FK1 student_id</text>
+              <text x="636" y="111" font-weight="bold">PK,FK2 course_id</text>
+              <line x1="630" y1="118" x2="755" y2="118" stroke="#111"/>
+              <text x="636" y="135">   enrolled_date</text>
+              <text x="636" y="151">   grade</text>
+
+              <!-- 0..* to 1 line from ENROLLMENT to COURSE -->
+              <line x1="755" y1="110" x2="795" y2="110" stroke="#111" stroke-width="1.6"/>
+              <line x1="765" y1="110" x2="755" y2="101" stroke="#111" stroke-width="1.6"/>
+              <line x1="765" y1="110" x2="755" y2="119" stroke="#111" stroke-width="1.6"/>
+              <circle cx="771" cy="110" r="4.5" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <line x1="784" y1="100" x2="784" y2="120" stroke="#111" stroke-width="1.8"/>
+              <line x1="790" y1="100" x2="790" y2="120" stroke="#111" stroke-width="1.8"/>
+
+              <!-- Table COURSE -->
+              <rect x="795" y="65" width="98" height="90" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <rect x="795" y="65" width="98" height="24" fill="#e9f0ea" stroke="#111"/>
+              <text x="820" y="81" font-weight="bold">COURSE</text>
+              <text x="800" y="105" font-weight="bold">PK course_id</text>
+              <line x1="795" y1="112" x2="893" y2="112" stroke="#ccc"/>
+              <text x="800" y="128">   title</text>
+              <text x="800" y="144">   credits</text>
+            </svg>
+          </div>
+
+          <h4>C. Bảng Ký Hiệu Hình Thật &amp; Sơ Đồ Mẫu Use Case Diagram Chuẩn UML 2.5</h4>
+          <div class="svg-board">
+            <svg viewBox="0 0 900 265" width="100%" height="265" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
+              <!-- Actor Stickman -->
+              <circle cx="55" cy="85" r="12" fill="#fff" stroke="#111" stroke-width="1.8"/>
+              <line x1="55" y1="97" x2="55" y2="132" stroke="#111" stroke-width="1.8"/>
+              <line x1="35" y1="110" x2="75" y2="110" stroke="#111" stroke-width="1.8"/>
+              <line x1="55" y1="132" x2="38" y2="158" stroke="#111" stroke-width="1.8"/>
+              <line x1="55" y1="132" x2="72" y2="158" stroke="#111" stroke-width="1.8"/>
+              <text x="28" y="176" font-weight="bold">Customer</text>
+              <text x="15" y="192" font-size="10" fill="#555">(Primary Actor)</text>
+
+              <!-- System Boundary -->
+              <rect x="135" y="15" width="590" height="235" fill="#fbfcfb" stroke="#111" stroke-width="1.8"/>
+              <text x="150" y="36" font-weight="bold">System Boundary: Food Delivery / Homestay Platform</text>
+
+              <!-- Association line Actor to UC -->
+              <line x1="78" y1="115" x2="180" y2="95" stroke="#111" stroke-width="1.5"/>
+              <line x1="78" y1="115" x2="180" y2="185" stroke="#111" stroke-width="1.5"/>
+
+              <!-- Base Use Case 1: Place Order -->
+              <ellipse cx="265" cy="95" rx="85" ry="28" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="222" y="99" font-weight="bold">Place Booking</text>
+
+              <!-- Base Use Case 2: Cancel Order -->
+              <ellipse cx="265" cy="185" rx="85" ry="26" fill="#fff" stroke="#111" stroke-width="1.6"/>
+              <text x="218" y="189" font-weight="bold">Search Rooms</text>
+
+              <!-- <<include>> arrow (Base -> Included) -->
+              <line x1="350" y1="88" x2="485" y2="62" stroke="#111" stroke-width="1.6" stroke-dasharray="6,4"/>
+              <polyline points="473,58 485,62 476,70" fill="none" stroke="#111" stroke-width="1.6"/>
+              <text x="372" y="65" font-weight="bold" fill="#2f6800">&lt;&lt;include&gt;&gt;</text>
+
+              <!-- Included Use Case: Pay Deposit -->
+              <ellipse cx="575" cy="58" rx="90" ry="26" fill="#e9f8db" stroke="#111" stroke-width="1.6"/>
+              <text x="518" y="62" font-weight="bold">Pay Mandatory Deposit</text>
+
+              <!-- <<extend>> arrow (Extending -> Base!) -->
+              <line x1="485" y1="152" x2="345" y2="108" stroke="#111" stroke-width="1.6" stroke-dasharray="6,4"/>
+              <polyline points="357,105 345,108 353,117" fill="none" stroke="#111" stroke-width="1.6"/>
+              <text x="375" y="148" font-weight="bold" fill="#c81e1e">&lt;&lt;extend&gt;&gt;</text>
+
+              <!-- Extending Use Case: Apply Promo Voucher -->
+              <ellipse cx="575" cy="160" rx="90" ry="26" fill="#fde8e8" stroke="#111" stroke-width="1.6"/>
+              <text x="512" y="164" font-weight="bold">Apply Promo Voucher</text>
+
+              <!-- Secondary Actor: Payment Gateway -->
+              <line x1="665" y1="58" x2="775" y2="95" stroke="#111" stroke-width="1.5"/>
+              <rect x="760" y="80" width="125" height="45" fill="#fff" stroke="#111" stroke-width="1.5"/>
+              <text x="772" y="98" font-size="10">&lt;&lt;actor&gt;&gt;</text>
+              <text x="768" y="114" font-weight="bold">PaymentGateway</text>
+
+              <!-- Legend Note at bottom of boundary -->
+              <text x="150" y="235" font-size="10.5" font-weight="bold">Ghi nhớ: &lt;&lt;include&gt;&gt; mũi tên trỏ SANG PHỤ (bắt buộc) | &lt;&lt;extend&gt;&gt; mũi tên trỏ NGƯỢC VỀ CHÍNH (tùy chọn)</text>
+            </svg>
           </div>
         </div>
 
-        <!-- MODULE 05: 4 DESIGN PATTERNS -->
+        <!-- MODULE 05: DESIGN PATTERNS -->
         <div id="mod-pattern" class="module-panel">
-          <h3>05. Khung 4 Design Pattern xuất hiện trong đề thi</h3>
+          <h3>05. Khung 4 Design Pattern GoF + Repository Pattern trong đề thi</h3>
           <p>File mẫu mở trong Draw.io Desktop: <a href="Templates_Hinh_Ve/07_Template_4_Design_Patterns_PE.drawio"><code>07_Template_4_Design_Patterns_PE.drawio</code></a></p>
 
           <div class="checklist-grid" style="margin-bottom:0;margin-top:14px;">
@@ -643,16 +1078,14 @@
 - OrderManager()   &lt;-- Constructor PRIVATE (-)
 + static getInstance(): OrderManager</pre>
 
-              <h4>4. Factory Method Pattern (Khởi tạo theo loại)</h4>
-              <pre class="code-snippet">[BouquetFactory]
-  + createBouquet(type: String): IBouquet
-        | (Dependency nét đứt)
-        v
-&lt;&lt;interface&gt;&gt; [IBouquet]
-  + getPrice(): Double
-        ^ (Nét đứt + tam giác rỗng)
-  +-----+------------------+
-[WeddingBouquet]    [BirthdayBouquet]</pre>
+              <h4>4. Factory Method &amp; 5. Generic Repository Pattern (Đề StayEase)</h4>
+              <pre class="code-snippet">[BookingService] ..&gt; &lt;&lt;interface&gt;&gt; [IGenericRepository&lt;T&gt;]
+                           + getById(id: String): T
+                           + save(entity: T): Boolean
+                           + updateStatus(id, status): void
+                                  ^ (Nét đứt + tam giác rỗng)
+                     +------------+------------+
+              [RoomRepository]       [ReservationRepository]</pre>
             </div>
           </div>
         </div>
@@ -675,79 +1108,97 @@
           <p>Quan hệ <code>1 - N</code>: Đặt khóa ngoại <code>FK</code> ở bảng phía Nhiều (<code>*</code>). Quan hệ <code>N - N</code>: Tách thành bảng trung gian chứa 2 khóa ngoại <code>FK</code> trỏ về 2 bảng chính. Quan hệ <code>1 - 1</code>: Đặt <code>FK UNIQUE</code> ở bảng phụ thuộc.</p>
         </div>
 
-        <!-- MODULE 07: BẢNG 10 ĐỀ THẬT & 15 LỖI -->
+        <!-- MODULE 07: BẢNG 11 ĐỀ THẬT & 15 LỖI -->
         <div id="mod-exams" class="module-panel">
-          <h3>07. Danh sách 10 đề thi thật &amp; 15 lỗi bị trừ điểm</h3>
+          <h3>07. Danh sách đầy đủ 11 đề thi thật (Kèm đề FA26_Example StayEase)</h3>
           <div class="data-table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
+                  <th>STT</th>
                   <th>Kỳ</th>
                   <th>Tên đề / Domain</th>
-                  <th>Cấu trúc câu hỏi &amp; Điểm</th>
+                  <th>Cấu trúc câu hỏi &amp; Thang điểm</th>
                   <th>File đề (.md)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td><strong>1</strong></td>
+                  <td><strong>FA26 Example</strong></td>
+                  <td><strong>StayEase Homestay Booking</strong></td>
+                  <td><strong>Q1: Design-level Class Diagram + IGenericRepository (3.0đ) | Q2: Sequence Diagram Layered + 2 alt (4.0đ) | Q3: Activity Diagram Swimlanes Check-out &amp; Inspection (3.0đ)</strong></td>
+                  <td><a href="FA26_Example/SWD392_PE_SPR26_Exam_Documentation.md"><strong>Mở đề StayEase</strong></a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>FA26 / SP26</td>
+                  <td>Food Delivery Platform</td>
+                  <td>Part 1: Use Case Diagram + 1 UC Specification (5.0đ) | Part 2: Sequence Diagram + Class Diagram (5.0đ)</td>
+                  <td><a href="FA26_Example/SWD392_PE_SPR26_ID.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>SU26 PE1</td>
+                  <td>Ride-Hailing System</td>
+                  <td>Q1: Class Diagram 6 classes (4.0đ) | Q2: Sequence Diagram Book &amp; Pay (4.0đ) | Q3: State Machine Trip (2.0đ)</td>
+                  <td><a href="SU26/SWD392_SU26_PE1.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>SU26 PE2</td>
+                  <td>MediCareHub Hospital</td>
+                  <td>Q1: Class Diagram 6 classes (4.0đ) | Q2: Sequence Diagram Lab &amp; Pay (4.0đ) | Q3: State Machine Appointment (2.0đ)</td>
+                  <td><a href="SU26/SWD392_SU26_MediCareHub_PE2.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>SP26</td>
+                  <td>Event Management</td>
+                  <td>Q1: Class (3đ) | Q2: Sequence (3đ) | Q3: State Machine Registration (2đ) | Q4: Design Pattern (2đ)</td>
+                  <td><a href="SP26/SWD392_SP26_EventManagementSystem_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Fall25</td>
+                  <td>E-Learning Platform</td>
+                  <td>Q1: Class (2.5đ) | Q2: Sequence (2.5đ) | Q3: State Machine (2đ) | Q4: Activity Swimlanes (2đ) | Q5: Schema (1đ)</td>
+                  <td><a href="Fall25/SWD392_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
                   <td>SU25</td>
                   <td>Cinema Management</td>
                   <td>Q1: FR/NFR (1đ) | Q2: Use Case (2đ) | Q3: Class (3.5đ) | Q4: ERD Crow's Foot (3.5đ)</td>
                   <td><a href="SU25/SWD392_CinemaManagement_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
                 </tr>
                 <tr>
+                  <td>8</td>
                   <td>SU25</td>
                   <td>Online Flower Shop</td>
                   <td>Q1: Architecture (2đ) | Q2: Activity Swimlanes (2đ) | Q3: Sequence (3đ) | Q4: Pattern (3đ)</td>
                   <td><a href="SU25/SWD392_FlowerShop_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
                 </tr>
                 <tr>
+                  <td>9</td>
                   <td>SU25</td>
                   <td>CyberAIFPTx Security</td>
                   <td>Q1: Architecture (2đ) | Q2: Activity (2đ) | Q3: Sequence (3đ) | Q4: Pattern (3đ)</td>
                   <td><a href="SU25/SWD392_PracticalExam_CyberAIFPTx_LêQuangĐạt.md">Mở đề</a></td>
                 </tr>
                 <tr>
+                  <td>10</td>
                   <td>SU25</td>
                   <td>Student Management</td>
                   <td>Q1: ERD Chen (2.5đ) | Q2: Class (2.5đ) | Q3: Activity Swimlanes (2.5đ) | Q4: Sequence (2.5đ)</td>
                   <td><a href="SU25/SWD392_StudentManagement_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
                 </tr>
                 <tr>
+                  <td>11</td>
                   <td>SU25</td>
                   <td>SmartHome Automation</td>
                   <td>Q1: ERD Chen (2.5đ) | Q2: Class + Pattern (2.5đ) | Q3: Sequence (2.5đ) | Q4: Statechart (2.5đ)</td>
                   <td><a href="SU25/SWD392_SU25_FinalExam_LêQuangĐạt.md">Mở đề</a></td>
-                </tr>
-                <tr>
-                  <td>Fall25</td>
-                  <td>E-Learning Platform</td>
-                  <td>Q1: Class (2.5đ) | Q2: Sequence (2.5đ) | Q3: State Machine (2đ) | Q4: Activity (2đ) | Q5: Schema (1đ)</td>
-                  <td><a href="Fall25/SWD392_PracticalExam_LêQuangĐạt.md">Mở đề</a></td>
-                </tr>
-                <tr>
-                  <td>SP26/FA26</td>
-                  <td>Food Delivery Platform</td>
-                  <td>Part 1: Use Case Diagram + UC Spec (5.0đ) | Part 2: Sequence + Class Diagram (5.0đ)</td>
-                  <td><a href="SP26/SWD392_PE_SPR26_ID.md">Mở đề</a></td>
-                </tr>
-                <tr>
-                  <td>SP26</td>
-                  <td>Event Management</td>
-                  <td>Q1: Class (3đ) | Q2: Sequence (3đ) | Q3: State Machine (2đ) | Q4: Design Pattern (2đ)</td>
-                  <td><a href="SP26/SWD392_SP26_EventManagementSystem_LêQuangĐạt.md">Mở đề</a></td>
-                </tr>
-                <tr>
-                  <td>SU26 PE1</td>
-                  <td>Ride-Hailing System</td>
-                  <td>Q1: Class Diagram 6 classes (4.0đ) | Q2: Sequence Diagram (4.0đ) | Q3: State Machine Trip (2.0đ)</td>
-                  <td><a href="SU26/SWD392_SU26_PE1.md">Mở đề</a></td>
-                </tr>
-                <tr>
-                  <td>SU26 PE2</td>
-                  <td>MediCareHub Hospital</td>
-                  <td>Q1: Class Diagram 6 classes (4.0đ) | Q2: Sequence Diagram (4.0đ) | Q3: State Machine Appointment (2.0đ)</td>
-                  <td><a href="SU26/SWD392_SU26_MediCareHub_PE2.md">Mở đề</a></td>
                 </tr>
               </tbody>
             </table>
@@ -755,7 +1206,7 @@
         </div>
       </div>
 
-      <!-- SECTION 5: PEA REGULATION CALLOUT BANNER ("WHAT CLIENTS SAY" QUOTE STYLE FROM REFERENCE) -->
+      <!-- SECTION 5: PEA REGULATION CALLOUT BANNER -->
       <div id="sec-rules" class="searchable-block">
         <div class="section-bar">
           <div class="section-bar-left">
@@ -772,7 +1223,7 @@
           <div class="quote-text">
             <strong>1. Tắt sạch ứng dụng chạy nền trước khi bật PEA:</strong> Ngay cả khi <code>OneDrive</code>, <code>Zalo</code>, <code>Discord</code>, <code>VS Code</code>, <code>Antigravity</code>, <code>Chrome/Edge</code>, <code>UltraViewer</code> hay <code>VMware</code> chỉ chạy ngầm ở khay hệ thống và chưa sử dụng, sinh viên vẫn bị tính là vi phạm.<br>
             <strong>2. Cấm chụp ảnh màn hình trong suốt giờ thi:</strong> Tuyệt đối không bấm <code>Win + Shift + S</code> hay <code>PrtSc</code>. Để đưa sơ đồ vào Word, trong Draw.io Desktop chọn <code>File &gt; Export as &gt; PNG (Zoom 200%)</code> rồi vào Word chọn <code>Insert &gt; Pictures</code>.<br>
-            <strong>3. Lưu bài ẩn danh:</strong> Không ghi tên hoặc mã số sinh viên vào tên file/folder bài làm trừ khi đề yêu cầu rõ.
+            <strong>3. Quy tắc đặt tên file bài nộp:</strong> Không dùng tên hoặc mã sinh viên khi đặt tên file/folder bài làm, <strong>trừ khi đề bài yêu cầu rõ</strong> (ví dụ đề StayEase yêu cầu <code>SWD392_PE_SPR26_[StudentID].docx</code> thì đặt đúng theo mẫu của đề).
           </div>
           <div class="quote-author">
             <div class="quote-author-name">QUY ĐỊNH THI THỰC HÀNH PEA</div>
@@ -799,10 +1250,10 @@
               <span class="feature-name" style="margin:0;">NGÀY 1: NẮM KÝ HIỆU &amp; VẼ THEO TEMPLATE</span>
               <span class="feature-num">DAY 01</span>
             </div>
-            <label class="check-row"><input type="checkbox" data-check="c1"><span><strong>Ca 1 (2h) - Class Diagram:</strong> Thuộc 6 loại mũi tên UML 2.5, mở file <code>01_Template_Class_Diagram_PE.drawio</code> và sửa theo đề SU26 MediCareHub (6 class).</span></label>
-            <label class="check-row"><input type="checkbox" data-check="c2"><span><strong>Ca 2 (2h) - Sequence Diagram:</strong> Thuộc thứ tự 6 Lifeline, đánh số 1, 1.1, 1.2, vẽ khung <code>alt [Success/Else]</code> và reply nét đứt theo đề SU26 Ride-Hailing.</span></label>
-            <label class="check-row"><input type="checkbox" data-check="c3"><span><strong>Ca 3 (1.5h) - State Machine &amp; Activity:</strong> Vẽ vòng đời trạng thái <code>Trip / Appointment</code> và Activity Diagram 3 Swimlanes có Fork/Join bar.</span></label>
-            <label class="check-row"><input type="checkbox" data-check="c4"><span><strong>Ca 4 (1.5h) - ERD &amp; Use Case:</strong> Phân biệt Chen's ERD (không FK) và Crow's Foot (có PK/FK, tách bảng N-N); nắm chiều mũi tên <code>include</code> và <code>extend</code>.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c1"><span><strong>Ca 1 (2h) - Class Diagram:</strong> Thuộc 6 loại mũi tên UML 2.5, mở file <code>01_Template_Class_Diagram_PE.drawio</code>, thực hành cả Domain Class (SU26) và Design-level Class có <code>BookingService ..&gt; IGenericRepository</code> (StayEase).</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c2"><span><strong>Ca 2 (2h) - Sequence Diagram:</strong> Thuộc thứ tự Lifeline theo Layered Architecture, đánh số 1, 1.1, 1.2, vẽ khung <code>alt</code> lồng nhau (Available/Occupied &amp; Payment Success/Failed) theo đề StayEase.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c3"><span><strong>Ca 3 (1.5h) - State Machine &amp; Activity Swimlanes:</strong> Vẽ vòng đời <code>Trip / Appointment</code> và Activity Diagram Check-out &amp; Inspection có Swimlanes <code>Host | StayEase System</code>.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c4"><span><strong>Ca 4 (1.5h) - ERD &amp; Use Case:</strong> Nhìn bảng ký hiệu hình thật phân biệt Chen's ERD (không FK) và Crow's Foot (chân chim <code>||, o|, |&lt;, o&lt;</code>); nắm chiều mũi tên <code>include</code> và <code>extend</code>.</span></label>
           </div>
 
           <div class="checklist-box">
@@ -810,10 +1261,10 @@
               <span class="feature-name" style="margin:0;">NGÀY 2: DESIGN PATTERN &amp; LUYỆN ĐỀ BẤM GIỜ</span>
               <span class="feature-num">DAY 02</span>
             </div>
-            <label class="check-row"><input type="checkbox" data-check="c5"><span><strong>Ca 1 (1.5h) - 4 Design Pattern:</strong> Nắm vững cấu trúc Class Diagram của <code>Strategy</code>, <code>Observer</code>, <code>Singleton</code>, <code>Factory Method</code>.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c5"><span><strong>Ca 1 (1.5h) - Design Patterns:</strong> Nắm vững cấu trúc Class Diagram của <code>Strategy</code>, <code>Observer</code>, <code>Singleton</code>, <code>Factory Method</code> và <code>IGenericRepository</code>.</span></label>
             <label class="check-row"><input type="checkbox" data-check="c6"><span><strong>Ca 2 (1h) - Khung câu hỏi viết:</strong> Học thuộc khung trả lời FR/NFR, 4-Tier Layered Architecture, Use Case Specification và Database Schema.</span></label>
-            <label class="check-row"><input type="checkbox" data-check="c7"><span><strong>Ca 3 (1.5h) - Luyện đề bấm giờ số 1:</strong> Giải trọn vẹn đề <code>SU26 PE1</code> trong 85 phút, xuất ảnh PNG từ Draw.io chèn vào MS Word.</span></label>
-            <label class="check-row"><input type="checkbox" data-check="c8"><span><strong>Ca 4 (1.5h) - Luyện đề bấm giờ số 2 &amp; Soát máy:</strong> Giải đề <code>SP26 Event Management</code>, kiểm tra 3 file offline (<code>.docx</code> và <code>.drawio</code>) sẵn sàng cho phòng thi.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c7"><span><strong>Ca 3 (1.5h) - Luyện đề bấm giờ số 1:</strong> Giải trọn vẹn đề <code>FA26_Example StayEase</code> trong 85 phút, xuất ảnh PNG từ Draw.io chèn vào MS Word.</span></label>
+            <label class="check-row"><input type="checkbox" data-check="c8"><span><strong>Ca 4 (1.5h) - Luyện đề bấm giờ số 2 &amp; Soát máy:</strong> Giải đề <code>SU26 PE1 / MediCareHub</code>, kiểm tra 3 file offline (<code>.docx</code> và <code>.drawio</code>) sẵn sàng cho phòng thi.</span></label>
           </div>
         </div>
       </div>
@@ -833,15 +1284,18 @@
 
         <div class="flashcard-grid">
           <div class="flashcard">
-            <div class="flashcard-q">01. Class A thực thi (implement) Interface B thì vẽ mũi tên gì?</div>
+            <div class="flashcard-q">01. Trong đề StayEase, BookingService gọi IGenericRepository còn RoomRepository thực thi IGenericRepository thì dùng 2 mũi tên gì?</div>
             <button class="btn-chip no-print" onclick="toggleFlashcard(this)">Xem đáp án</button>
-            <div class="flashcard-a">Dùng quan hệ <strong>Realization</strong>: Đường <strong>NÉT ĐỨT</strong> + đầu <strong>TAM GIÁC RỖNG</strong> trỏ về phía <code>&lt;&lt;interface&gt;&gt; B</code>.</div>
+            <div class="flashcard-a">
+              - <code>BookingService ..&gt; IGenericRepository</code>: Dùng <strong>Dependency</strong> (Nét đứt + mũi tên hở).<br>
+              - <code>RoomRepository ..|&gt; IGenericRepository</code>: Dùng <strong>Realization</strong> (Nét đứt + tam giác rỗng).
+            </div>
           </div>
 
           <div class="flashcard">
-            <div class="flashcard-q">02. Giữa MedicalRecord và Prescription dùng hình thoi đặc hay rỗng? Đặt ở đâu?</div>
+            <div class="flashcard-q">02. Giữa Reservation và Payment (Deposit/Final Payment) trong đề StayEase dùng hình thoi đặc hay rỗng? Đặt ở đâu?</div>
             <button class="btn-chip no-print" onclick="toggleFlashcard(this)">Xem đáp án</button>
-            <div class="flashcard-a">Dùng <strong>Hình thoi ĐẶC (Composition)</strong> đặt sát cạnh <code>MedicalRecord</code> (phía Whole), vì xóa bệnh án thì đơn thuốc bên trong không tồn tại độc lập.</div>
+            <div class="flashcard-a">Dùng <strong>Hình thoi ĐẶC (Composition)</strong> đặt sát cạnh <code>Reservation</code> (phía Whole, ghi <code>1</code>) và <code>1..*</code> ở phía <code>Payment</code>, vì đề ghi rõ "A payment record cannot exist without a corresponding reservation".</div>
           </div>
 
           <div class="flashcard">
@@ -851,14 +1305,19 @@
           </div>
 
           <div class="flashcard">
-            <div class="flashcard-q">04. Đề bài yêu cầu vẽ "Conceptual ERD (Chen's Notation)", có được ghi FK và kiểu dữ liệu không?</div>
+            <div class="flashcard-q">04. Trong Crow's Foot ERD, 4 ký hiệu đầu dây ||, o|, |&lt;, o&lt; có ý nghĩa là gì?</div>
             <button class="btn-chip no-print" onclick="toggleFlashcard(this)">Xem đáp án</button>
-            <div class="flashcard-a"><strong>Tuyệt đối KHÔNG.</strong> Chen's ERD chỉ dùng Hình chữ nhật (Entity), Hình thoi (Relationship), Hình Elip (Attribute) và gạch chân khóa chính trong Elip.</div>
+            <div class="flashcard-a">
+              - <code>||</code> : Mandatory One (Chỉ 1 và bắt buộc, <code>1..1</code>)<br>
+              - <code>o|</code> : Optional One (0 hoặc 1, <code>0..1</code>)<br>
+              - <code>|&lt;</code> : Mandatory Many (1 hoặc nhiều, <code>1..*</code>)<br>
+              - <code>o&lt;</code> : Optional Many (0 hoặc nhiều, <code>0..*</code>)
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- FOOTER CTA SECTION ("HAVE A PROJECT IN MIND?" STYLE FROM REFERENCE) -->
+      <!-- FOOTER CTA SECTION -->
       <div class="footer-cta">
         <div>
           <div class="section-bar-left" style="margin-bottom:10px;">
@@ -933,7 +1392,6 @@
   </div>
 
   <script>
-    // Chuyển tab trong phần Deep-Dive Modules
     function switchModule(modId, btnEl) {
       var panels = document.querySelectorAll('.module-panel');
       panels.forEach(function(p) { p.classList.remove('active'); });
@@ -945,7 +1403,6 @@
       if (btnEl) btnEl.classList.add('active');
     }
 
-    // Checklist lưu tiến độ tự động vào localStorage
     (function initChecklist() {
       var boxes = document.querySelectorAll('input[data-check]');
       boxes.forEach(function(cb) {
@@ -989,7 +1446,6 @@
       updateProgress();
     }
 
-    // Flashcards
     function toggleFlashcard(btn) {
       var ans = btn.nextElementSibling;
       if (ans) ans.classList.toggle('open');
@@ -1003,7 +1459,6 @@
       });
     }
 
-    // Đồng hồ bấm giờ luyện đề
     var timerSeconds = 90 * 60;
     var timerRef = null;
 
@@ -1046,7 +1501,6 @@
       renderTimer();
     }
 
-    // Tìm kiếm nhanh
     document.getElementById('searchInput').addEventListener('input', function(e) {
       var q = e.target.value.trim().toLowerCase();
       var panels = document.querySelectorAll('.module-panel');
