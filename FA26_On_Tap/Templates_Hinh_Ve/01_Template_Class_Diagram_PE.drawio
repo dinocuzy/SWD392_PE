@@ -1,0 +1,221 @@
+<mxfile host="Electron" version="24.0.0">
+  <diagram id="class-diagram-pe" name="Q1_Class_Diagram_Template">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1650" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        
+        <mxCell id="title_box" value="&lt;b style=&quot;font-size:15px;&quot;&gt;TEMPLATE CÂU 1: DESIGN-LEVEL CLASS DIAGRAM (LAYERED ARCHITECTURE + REPOSITORY PATTERN)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px;&quot;&gt;Hướng dẫn: Nhấp đúp vào từng hộp để thay các chữ trong &lt;b&gt;[...]&lt;/b&gt; theo đề bài. Giữ nguyên các mũi tên và cấu trúc!&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1560" height="50" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="grp_user_label" value="&lt;b&gt;1. CỤM KẾ THỪA USER (INHERITANCE)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="500" height="30" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_user" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;entity&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;&lt;i&gt;User&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;# userId: int&lt;br&gt;# fullName: String&lt;br&gt;# email: String&lt;br&gt;# phone: String&lt;br&gt;# status: String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ login(email: String, pass: String): boolean&lt;br&gt;+ updateProfile(): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="140" width="260" height="170" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_role1" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;entity&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[Role1: Customer / Patient / Student]&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- memberCode: String&lt;br&gt;- loyaltyPoints: int&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ search[Resource](): List&amp;lt;[Resource]&amp;gt;&lt;br&gt;+ create[MainTx](): [MainTx]&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="235" height="150" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_role2" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;entity&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[Role2: Host / Doctor / Organizer]&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- departmentOrSpecialty: String&lt;br&gt;- rating: double&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ manage[Resource](): void&lt;br&gt;+ recordOutcomeOrInspect(): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="305" y="380" width="235" height="150" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_role3" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;entity&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[Role3: Staff / Receptionist / Admin]&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- staffCode: String&lt;br&gt;- shiftOrRole: String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ confirmOrApprove[MainTx](): void&lt;br&gt;+ generateReport(): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="580" width="235" height="150" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="inh_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" edge="1" parent="1" source="cls_role1" target="cls_user">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="157" y="345" />
+              <mxPoint x="290" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inh_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" edge="1" parent="1" source="cls_role2" target="cls_user">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="422" y="345" />
+              <mxPoint x="290" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inh_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" edge="1" parent="1" source="cls_role3" target="cls_user">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="655" />
+              <mxPoint x="20" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        
+        <mxCell id="grp_ent_label" value="&lt;b&gt;2. CỤM THỰC THỂ NGHIỆP VỤ (DOMAIN ENTITIES + MULTIPLICITY)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="580" y="90" width="460" height="30" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_resource" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;entity&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[Resource: Room / Event / ParkingSlot / Schedule]&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- resourceId: int&lt;br&gt;- nameOrCode: String&lt;br&gt;- location: String&lt;br&gt;- priceOrCapacity: double&lt;br&gt;- status: String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ isAvailable(): boolean&lt;br&gt;+ updateStatus(newStatus: String): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="660" y="140" width="310" height="185" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_maintx" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;entity&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[MainTx: Reservation / Registration / Ticket / Appointment]&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- transactionId: int&lt;br&gt;- startDate: DateTime&lt;br&gt;- endDate: DateTime&lt;br&gt;- totalAmount: double&lt;br&gt;- status: String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ calculateTotalAmount(): double&lt;br&gt;+ updateStatus(newStatus: String): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="660" y="400" width="310" height="185" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_payment" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;entity&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Payment&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- paymentId: int&lt;br&gt;- paymentType: String&lt;br&gt;- amount: double&lt;br&gt;- paymentDate: DateTime&lt;br&gt;- paymentStatus: String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ processPayment(): boolean&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="660" y="660" width="310" height="170" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="rel_role2_res" value="manages" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;startSize=14;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="cls_role2" target="cls_resource">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="455" />
+              <mxPoint x="570" y="232" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_role2_res_m1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_role2_res">
+          <mxGeometry x="-0.85" y="1" relative="1" as="geometry"><mxPoint y="-12" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rel_role2_res_m2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_role2_res">
+          <mxGeometry x="0.85" y="1" relative="1" as="geometry"><mxPoint y="-12" as="offset" /></mxGeometry>
+        </mxCell>
+
+        
+        <mxCell id="rel_role1_tx" value="creates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="cls_role1" target="cls_maintx">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="157" y="555" />
+              <mxPoint x="610" y="555" />
+              <mxPoint x="610" y="492" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_role1_tx_m1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_role1_tx">
+          <mxGeometry x="-0.9" relative="1" as="geometry"><mxPoint x="12" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rel_role1_tx_m2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_role1_tx">
+          <mxGeometry x="0.9" relative="1" as="geometry"><mxPoint x="-15" y="-12" as="offset" /></mxGeometry>
+        </mxCell>
+
+        
+        <mxCell id="rel_tx_res" value="books / refers to" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="cls_maintx" target="cls_resource">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_tx_res_m1" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_tx_res">
+          <mxGeometry x="-0.7" relative="1" as="geometry"><mxPoint x="22" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rel_tx_res_m2" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_tx_res">
+          <mxGeometry x="0.7" relative="1" as="geometry"><mxPoint x="18" as="offset" /></mxGeometry>
+        </mxCell>
+
+        
+        <mxCell id="rel_tx_pay" value="contains (Composition)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;startSize=14;endArrow=none;strokeWidth=1.5;" edge="1" parent="1" source="cls_maintx" target="cls_payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_tx_pay_m1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_tx_pay">
+          <mxGeometry x="-0.7" relative="1" as="geometry"><mxPoint x="18" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="rel_tx_pay_m2" value="1..* (or 0..1)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" vertex="1" connectable="0" parent="rel_tx_pay">
+          <mxGeometry x="0.7" relative="1" as="geometry"><mxPoint x="45" as="offset" /></mxGeometry>
+        </mxCell>
+
+        
+        <mxCell id="grp_arch_label" value="&lt;b&gt;3. CỤM KIẾN TRÚC PHÂN TẦNG &amp;amp; REPOSITORY PATTERN (BẮT BUỘC)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="90" width="520" height="30" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_ctrl" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;controller&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[MainTx]Controller&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- service: [MainTx]Service&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ submit[MainTx]Request(userId: int, resourceId: int): Response&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="140" width="380" height="115" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_svc" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;service&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[MainTx]Service&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;- resourceRepo: IGenericRepository&amp;lt;[Resource]&amp;gt;&lt;br&gt;- mainTxRepo: IGenericRepository&amp;lt;[MainTx]&amp;gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ create[MainTx](userId: int, resourceId: int): boolean&lt;br&gt;+ checkAvailability(resourceId: int): boolean&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="310" width="380" height="145" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_irepo" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;interface&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IGenericRepository&amp;lt;T&amp;gt;&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ getById(id: int): T&lt;br&gt;+ getAll(): List&amp;lt;T&amp;gt;&lt;br&gt;+ save(entity: T): void&lt;br&gt;+ update(entity: T): void&lt;br&gt;+ delete(id: int): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="510" width="300" height="165" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_res_repo" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;repository&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[Resource]Repository&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ getById(id: int): [Resource]&lt;br&gt;+ save(entity: [Resource]): void&lt;br&gt;+ checkAvailability(id: int): boolean&lt;br&gt;+ updateStatus(id: int, status: String): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="750" width="255" height="150" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cls_tx_repo" value="&lt;p style=&quot;text-align:center;margin:4px 0;&quot;&gt;&lt;i&gt;&amp;laquo;repository&amp;raquo;&lt;/i&gt;&lt;br&gt;&lt;b&gt;[MainTx]Repository&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:4px 0;&quot;&gt;+ getById(id: int): [MainTx]&lt;br&gt;+ save(entity: [MainTx]): void&lt;br&gt;+ update(entity: [MainTx]): void&lt;br&gt;+ updateStatus(id: int, status: String): void&lt;/p&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="750" width="255" height="150" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="dep_ctrl_svc" value="&amp;laquo;uses&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="cls_ctrl" target="cls_svc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="dep_svc_irepo" value="&amp;laquo;depends on&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="cls_svc" target="cls_irepo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="real_res_repo" value="&amp;laquo;implements&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" edge="1" parent="1" source="cls_res_repo" target="cls_irepo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1197" y="715" />
+              <mxPoint x="1340" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        
+        <mxCell id="real_tx_repo" value="&amp;laquo;implements&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" edge="1" parent="1" source="cls_tx_repo" target="cls_irepo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1482" y="715" />
+              <mxPoint x="1340" y="715" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        
+        <mxCell id="dep_resrepo_ent" value="&amp;laquo;manages&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=open;endFill=0;endSize=10;strokeWidth=1.2;" edge="1" parent="1" source="cls_res_repo" target="cls_resource">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="825" />
+              <mxPoint x="1030" y="232" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep_txrepo_ent" value="&amp;laquo;manages&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=open;endFill=0;endSize=10;strokeWidth=1.2;" edge="1" parent="1" source="cls_tx_repo" target="cls_maintx">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1482" y="930" />
+              <mxPoint x="1005" y="930" />
+              <mxPoint x="1005" y="492" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

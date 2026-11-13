@@ -1,0 +1,137 @@
+<mxfile host="Electron" version="24.0.0">
+  <diagram id="activity-diagram-pe" name="Q3B_Activity_Swimlanes_Template">
+    <mxGraphModel dx="1350" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        
+        <mxCell id="lane_actor" value="[Swimlane 1: Host / Customer]" style="swimlane;whiteSpace=wrap;html=1;startSize=35;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="460" height="900" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_init" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="lane_actor">
+          <mxGeometry x="212" y="60" width="35" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_1" value="&lt;b&gt;Step 1: Inspect Room / Drive Vehicle to Exit Gate&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="lane_actor">
+          <mxGeometry x="95" y="135" width="270" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_2" value="&lt;b&gt;Step 2: Enter Inspection Results / Submit Ticket&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="lane_actor">
+          <mxGeometry x="95" y="230" width="270" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_4" value="&lt;b&gt;Step 4: Settle Final Invoice / Make Payment&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="lane_actor">
+          <mxGeometry x="95" y="530" width="270" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_end" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="lane_actor">
+          <mxGeometry x="212" y="820" width="36" height="36" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="lane_system" value="[Swimlane 2: System (StayEase / SmartPark)]" style="swimlane;whiteSpace=wrap;html=1;startSize=35;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="540" y="40" width="560" height="900" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_3" value="&lt;b&gt;Step 3: Evaluate Inspection Report / Calculate Fee&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="lane_system">
+          <mxGeometry x="145" y="230" width="270" height="55" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="act_dec" value="&lt;b&gt;Condition?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="lane_system">
+          <mxGeometry x="225" y="325" width="110" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_3a" value="&lt;b&gt;Calculate Damage Fee &amp;amp;&lt;br&gt;Add to Final Invoice&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="lane_system">
+          <mxGeometry x="30" y="430" width="210" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_3b" value="&lt;b&gt;Generate Standard Final Invoice&lt;br&gt;(Remaining Balance Only)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="lane_system">
+          <mxGeometry x="315" y="430" width="215" height="55" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="act_fork" value="" style="shape=line;html=1;strokeWidth=5;strokeColor=#000000;" vertex="1" parent="lane_system">
+          <mxGeometry x="120" y="615" width="320" height="10" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="act_5a" value="&lt;b&gt;Step 5a: Update [Reservation / Ticket]&lt;br&gt;status to &quot;Completed&quot;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="lane_system">
+          <mxGeometry x="30" y="665" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_5b" value="&lt;b&gt;Step 5b: Update [Room / ParkingSlot]&lt;br&gt;status to &quot;Cleaning / Available&quot;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="lane_system">
+          <mxGeometry x="310" y="665" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="act_join" value="" style="shape=line;html=1;strokeWidth=5;strokeColor=#000000;" vertex="1" parent="lane_system">
+          <mxGeometry x="120" y="765" width="320" height="10" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="cf_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="lane_actor" source="act_init" target="act_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="lane_actor" source="act_1" target="act_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="act_2" target="act_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="lane_system" source="act_3" target="act_dec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_dec_yes" value="[Damage Found / Yes]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="lane_system" source="act_dec" target="act_3a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_dec_no" value="[No Damage / No]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="lane_system" source="act_dec" target="act_3b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_to_act4_a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="act_3a" target="act_4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cf_to_act4_b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="act_3b" target="act_4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="962" y="557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cf_4_to_fork" value="Payment Confirmed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="act_4" target="act_fork">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cf_fork_a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="lane_system" source="act_fork" target="act_5a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_fork_b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="lane_system" source="act_fork" target="act_5b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_join_a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="lane_system" source="act_5a" target="act_join">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_join_b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="lane_system" source="act_5b" target="act_join">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf_to_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="act_join" target="act_end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="878" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

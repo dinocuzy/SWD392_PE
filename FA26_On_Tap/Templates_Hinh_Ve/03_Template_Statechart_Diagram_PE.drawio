@@ -1,0 +1,117 @@
+<mxfile host="Electron" version="24.0.0">
+  <diagram id="statechart-diagram-pe" name="Q3A_Statechart_Diagram_Template">
+    <mxGraphModel dx="1450" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="st_title" value="&lt;b style=&quot;font-size:15px;&quot;&gt;TEMPLATE CÂU 3A: STATECHART DIAGRAM (VÒNG ĐỜI THỰC THỂ - ĐỦ &amp;gt;= 6 TRANSITIONS + NHÁNH HỦY/LỖI)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px;&quot;&gt;Áp dụng cho: Appointment (MediCare), Event (EMS), Booking (Cinema), Order (FlowerShop/Food), StudentStatus (CyberAI/Final)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="1260" height="50" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_init" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="255" width="35" height="35" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_1" value="&lt;b style=&quot;font-size:13px;&quot;&gt;[State 1: Pending / Draft]&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;entry / initializeRecord()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="230" y="235" width="200" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_2" value="&lt;b style=&quot;font-size:13px;&quot;&gt;[State 2: Confirmed / Approved]&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;entry / sendConfirmation()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="560" y="235" width="210" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_3" value="&lt;b style=&quot;font-size:13px;&quot;&gt;[State 3: CheckedIn / Open]&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;do / monitorStatus()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="900" y="235" width="210" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_4" value="&lt;b style=&quot;font-size:13px;&quot;&gt;[State 4: InConsultation / Ongoing]&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;do / executeService()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="900" y="420" width="210" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_5" value="&lt;b style=&quot;font-size:13px;&quot;&gt;[State 5: Completed]&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;entry / recordFinalOutcome()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="900" y="600" width="210" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_fail" value="&lt;b style=&quot;font-size:13px;&quot;&gt;[PaymentFailed / Rejected]&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;entry / notifyFailure()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="230" y="480" width="200" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_cancel" value="&lt;b style=&quot;font-size:13px;&quot;&gt;[Cancelled]&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;entry / releaseResource()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="560" y="480" width="210" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="st_final" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="647" y="690" width="36" height="36" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="tr_1" value="1: create[Entity]()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="st_init" target="st_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tr_2" value="2: paySuccess / approve [valid]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="st_1" target="st_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tr_3" value="3: payFail / reject [invalid]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontColor=#CC0000;" edge="1" parent="1" source="st_1" target="st_fail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tr_4" value="4: cancel [by User]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontColor=#CC0000;" edge="1" parent="1" source="st_1" target="st_cancel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="290" />
+              <mxPoint x="460" y="517" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="tr_5" value="5: checkIn / openRegistration" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="st_2" target="st_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tr_6" value="6: cancel [before start]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontColor=#CC0000;" edge="1" parent="1" source="st_2" target="st_cancel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tr_7" value="7: startConsultation / startEvent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="st_3" target="st_4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tr_8" value="8: finishConsultation / finishEvent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="st_4" target="st_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="tr_end1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="st_fail" target="st_final">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="708" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr_end2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="st_cancel" target="st_final">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr_end3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;" edge="1" parent="1" source="st_5" target="st_final">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1005" y="708" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

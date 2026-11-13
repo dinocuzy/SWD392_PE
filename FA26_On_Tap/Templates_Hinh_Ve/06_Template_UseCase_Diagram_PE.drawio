@@ -1,0 +1,97 @@
+<mxfile host="Electron" version="24.0.0">
+  <diagram id="usecase-diagram-pe" name="Part1_UseCase_Diagram_Template">
+    <mxGraphModel dx="1350" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        
+        <mxCell id="uc_boundary" value="&lt;b style=&quot;font-size:15px;&quot;&gt;[System Name: Cinema Management System]&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=8;fillColor=#fafafa;strokeColor=#000000;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="760" height="720" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="act_cust" value="&lt;b&gt;Customer&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="220" width="40" height="75" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_staff" value="&lt;b&gt;Staff / Admin&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="540" width="40" height="75" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_ext" value="&lt;b&gt;&amp;laquo;system&amp;raquo;&lt;br&gt;Email / Payment Service&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="340" width="40" height="75" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="uc_1" value="&lt;b&gt;Browse Movies &amp;amp;&lt;br&gt;Check Showtimes&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_2" value="&lt;b&gt;View Movie Details&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="690" y="100" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_3" value="&lt;b&gt;Reserve Ticket Online&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="230" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_4" value="&lt;b&gt;Select Specific Seat&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="200" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_5" value="&lt;b&gt;Process Ticket Payment&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="295" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_6" value="&lt;b&gt;Send Confirmation Email&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="385" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_7" value="&lt;b&gt;View Booking History&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="360" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_8" value="&lt;b&gt;Cancel Booking&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="465" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_9" value="&lt;b&gt;Create Walk-in Ticket&lt;br&gt;Purchase at Counter&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="555" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_10" value="&lt;b&gt;Create &amp;amp; Update&lt;br&gt;Movie Schedule&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="655" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_11" value="&lt;b&gt;Track Seat Availability&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="655" width="190" height="65" as="geometry" />
+        </mxCell>
+
+        
+        <mxCell id="ua_1" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="act_cust" target="uc_1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ua_2" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="act_cust" target="uc_3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ua_3" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="act_cust" target="uc_7"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="ua_4" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="act_staff" target="uc_9"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ua_5" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="act_staff" target="uc_10"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ua_6" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="act_staff" target="uc_11"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="ua_7" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="uc_5" target="act_ext"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ua_8" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="uc_6" target="act_ext"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        
+        <mxCell id="inc_1" value="&amp;laquo;include&amp;raquo;" style="html=1;dashed=1;dashPattern=6 6;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="uc_3" target="uc_4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="inc_2" value="&amp;laquo;include&amp;raquo;" style="html=1;dashed=1;dashPattern=6 6;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="uc_3" target="uc_5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="inc_3" value="&amp;laquo;include&amp;raquo;" style="html=1;dashed=1;dashPattern=6 6;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="uc_3" target="uc_6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="inc_4" value="&amp;laquo;include&amp;raquo;" style="html=1;dashed=1;dashPattern=6 6;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="uc_9" target="uc_4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="inc_5" value="&amp;laquo;include&amp;raquo;" style="html=1;dashed=1;dashPattern=6 6;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;" edge="1" parent="1" source="uc_9" target="uc_5"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        
+        <mxCell id="ext_1" value="&amp;laquo;extend&amp;raquo;" style="html=1;dashed=1;dashPattern=6 6;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;strokeColor=#b85450;" edge="1" parent="1" source="uc_2" target="uc_1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ext_2" value="&amp;laquo;extend&amp;raquo;" style="html=1;dashed=1;dashPattern=6 6;endArrow=open;endFill=0;strokeWidth=1.5;fontStyle=1;strokeColor=#b85450;" edge="1" parent="1" source="uc_8" target="uc_7"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
