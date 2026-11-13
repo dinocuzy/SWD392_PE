@@ -359,9 +359,9 @@
           <h3>01. Hướng dẫn vẽ Class Diagram (Xuất hiện 100% đề thi - 3.0 điểm ở đề mới / 1.5 - 3.0 điểm ở đề cũ)</h3>
           <p>File mẫu mở trong Draw.io Desktop: <a href="Templates_Hinh_Ve/01_Template_Class_Diagram_PE.drawio"><code>01_Template_Class_Diagram_PE.drawio</code></a> | Barem chấm PE: <strong>Đủ 3 cụm Class (0.75đ)</strong> + <strong>Đúng mũi tên Kế thừa &amp; Thực thi Interface nét đứt (0.75đ)</strong> + <strong>Đúng Composition/Aggregation &amp; Multiplicity (0.75đ)</strong> + <strong>Đủ dấu <code>-</code>/<code>#</code>/<code>+</code> &amp; Brief Explanation (0.75đ)</strong>.</p>
 
-          <h4>A. Bảng 7 quan hệ chuẩn UML 2.5 (Hình ký hiệu thật - Không chồng nét, đúng chuẩn lý thuyết môn học)</h4>
+          <h4>A. Bảng Ký Hiệu Hình Thật Chuẩn UML 2.5 Cho Class Diagram (Đúng chuẩn môn học)</h4>
           <div class="svg-board">
-            <svg viewBox="0 0 1040 315" width="100%" height="315" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
+            <svg viewBox="0 0 1040 345" width="100%" height="345" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="11.5">
               <!-- Header Bar -->
               <rect x="10" y="8" width="330" height="26" fill="#111312"/>
               <text x="20" y="25" fill="#88f724" font-weight="bold">TÊN QUAN HỆ TRONG ĐỀ PE</text>
@@ -395,15 +395,14 @@
               <text x="570" y="138" font-weight="bold">NÉT ĐỨT + Mũi tên HỞ chỉ sang lớp được gọi</text>
               <text x="570" y="153" fill="#555" font-size="10.5">Controller ..&gt; Service ..&gt; IGenericRepository&lt;T&gt;</text>
 
-              <!-- Row 4: Association -->
+              <!-- Row 4: Association (Bi-directional solid line, optional open arrow for navigable) -->
               <text x="15" y="178" font-weight="bold">4. Association (Liên kết thường)</text>
               <text x="15" y="193" fill="#555" font-size="10.5">Customer đặt nhiều Reservation</text>
-              <line x1="360" y1="180" x2="530" y2="180" stroke="#111" stroke-width="1.8"/>
-              <polyline points="518,173 530,180 518,187" fill="none" stroke="#111" stroke-width="1.8"/>
-              <text x="368" y="173" font-weight="bold">1</text>
-              <text x="488" y="173" font-weight="bold">0..*</text>
+              <line x1="360" y1="180" x2="532" y2="180" stroke="#111" stroke-width="1.8"/>
+              <text x="366" y="173" font-weight="bold">1</text>
+              <text x="498" y="173" font-weight="bold">0..*</text>
               <text x="570" y="178" font-weight="bold">Nét liền + BẮT BUỘC ghi Multiplicity ở cả 2 đầu</text>
-              <text x="570" y="193" fill="#c81e1e" font-size="10.5">Lỗi trừ 0.5đ: Quên ghi 1, 0..1, 0..*, 1..* ở 2 đầu dây</text>
+              <text x="570" y="193" fill="#555" font-size="10.5">(Có mũi tên hở ở 1 đầu nếu là Directed Association 1 chiều)</text>
 
               <!-- Row 5: Aggregation -->
               <text x="15" y="218" font-weight="bold">5. Aggregation (Tập hợp lỏng)</text>
@@ -411,7 +410,7 @@
               <polygon points="360,220 373,213 386,220 373,227" fill="#fff" stroke="#111" stroke-width="1.8"/>
               <line x1="386" y1="220" x2="532" y2="220" stroke="#111" stroke-width="1.8"/>
               <text x="392" y="213" font-weight="bold">1</text>
-              <text x="495" y="213" font-weight="bold">0..*</text>
+              <text x="498" y="213" font-weight="bold">0..*</text>
               <text x="570" y="218" font-weight="bold">Hình thoi RỖNG gắn sát vào Lớp Chứa (Whole)</text>
               <text x="570" y="233" fill="#555" font-size="10.5">VD: Department (1) ◇── (1..*) Professor (Đề SU25 Final)</text>
 
@@ -421,21 +420,82 @@
               <polygon points="360,260 373,253 386,260 373,267" fill="#111" stroke="#111" stroke-width="1.8"/>
               <line x1="386" y1="260" x2="532" y2="260" stroke="#111" stroke-width="1.8"/>
               <text x="392" y="253" font-weight="bold">1</text>
-              <text x="495" y="253" font-weight="bold">1..*</text>
+              <text x="498" y="253" font-weight="bold">1..*</text>
               <text x="570" y="258" font-weight="bold">Hình thoi ĐẶC ĐEN gắn sát vào Lớp Mẹ (Reservation)</text>
               <text x="570" y="273" fill="#c81e1e" font-size="10.5">Lỗi trừ 0.25đ: Đặt nhầm hình thoi đen ở đầu lớp con Payment</text>
 
               <!-- Row 7: Association Class -->
-              <text x="15" y="298" font-weight="bold">7. Association Class (Lớp N-N)</text>
-              <line x1="360" y1="292" x2="532" y2="292" stroke="#111" stroke-width="1.8"/>
-              <text x="365" y="287" font-size="10" font-weight="bold">0..*</text>
-              <text x="502" y="287" font-size="10" font-weight="bold">0..*</text>
-              <line x1="446" y1="292" x2="446" y2="309" stroke="#111" stroke-width="1.6" stroke-dasharray="4,3"/>
-              <rect x="406" y="299" width="80" height="15" fill="#e9f8db" stroke="#111" stroke-width="1.2"/>
-              <text x="412" y="310" font-size="9.5" font-weight="bold">GradeReport</text>
-              <text x="570" y="298" font-weight="bold">NÉT ĐỨT không mũi tên thả từ GIỮA đường N-N xuống</text>
-              <text x="570" y="311" fill="#555" font-size="10.5">VD: Student (0..*) ── (0..*) Course kèm lớp GradeReport</text>
+              <text x="15" y="302" font-weight="bold">7. Association Class (Lớp N-N)</text>
+              <text x="15" y="317" fill="#555" font-size="10.5">Lớp lưu thuộc tính của liên kết N-N</text>
+              <line x1="360" y1="296" x2="532" y2="296" stroke="#111" stroke-width="1.8"/>
+              <text x="364" y="290" font-size="10" font-weight="bold">0..*</text>
+              <text x="502" y="290" font-size="10" font-weight="bold">0..*</text>
+              <line x1="446" y1="296" x2="446" y2="314" stroke="#111" stroke-width="1.6" stroke-dasharray="4,3"/>
+              <rect x="401" y="314" width="90" height="20" fill="#e9f8db" stroke="#111" stroke-width="1.3"/>
+              <text x="411" y="328" font-size="10" font-weight="bold">GradeReport</text>
+              <text x="570" y="302" font-weight="bold">NÉT ĐỨT không mũi tên thả từ GIỮA đường N-N xuống</text>
+              <text x="570" y="317" fill="#555" font-size="10.5">VD: Student (0..*) ── (0..*) Course kèm lớp GradeReport</text>
             </svg>
+          </div>
+
+          <h4>A2. Ý Nghĩa Chi Tiết Từng Ký Hiệu Trong Class Diagram</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Ký hiệu</th>
+                  <th>Tên gọi UML 2.5</th>
+                  <th>Ý nghĩa chi tiết &amp; Cách áp dụng đúng trong bài thi PE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Hộp 3 ngăn + <code>- # + ~</code></strong></td>
+                  <td>Class Box &amp; Visibility</td>
+                  <td>Ngăn 1: Stereotype (<code>«entity»</code>, <code>«interface»</code>, <code>«service»</code>, <code>«repository»</code>, <code>«controller»</code>) + Tên Class (Danh từ số ít, PascalCase; <em>chữ nghiêng</em> nếu là Abstract Class). Ngăn 2: Attributes (<code>-</code> private cho lớp thường, <code>#</code> protected cho lớp cha <code>User</code>). Ngăn 3: Methods (<code>+</code> public).</td>
+                </tr>
+                <tr>
+                  <td><code>1</code>, <code>0..1</code>, <code>0..*</code>, <code>1..*</code></td>
+                  <td>Multiplicity (Bội số)</td>
+                  <td><code>1</code>: đúng 1 đối tượng; <code>0..1</code>: có thể có 0 hoặc 1 (VD: 1 <code>ParkingTicket</code> có <code>0..1</code> <code>Payment</code>); <code>0..*</code>: 0 hoặc nhiều (VD: 1 <code>Customer</code> có <code>0..*</code> <code>Reservation</code>); <code>1..*</code>: ít nhất 1 trở lên (VD: 1 <code>Reservation</code> có <code>1..*</code> <code>Payment</code>).</td>
+                </tr>
+                <tr>
+                  <td><strong>Nét liền + Tam giác rỗng</strong> (<code>─▷</code>)</td>
+                  <td>Generalization (Inheritance)</td>
+                  <td>Quan hệ <strong>"is-a"</strong>: Lớp con kế thừa toàn bộ thuộc tính <code>#</code> và phương thức <code>+</code> từ lớp cha (VD: <code>Customer</code>, <code>Host</code> kế thừa <code>User</code>). Đầu tam giác rỗng luôn chĩa về phía lớp Cha.</td>
+                </tr>
+                <tr>
+                  <td><strong>Nét đứt + Tam giác rỗng</strong> (<code>┈▷</code>)</td>
+                  <td>Realization (Implementation)</td>
+                  <td>Quan hệ thực thi hợp đồng Interface: Lớp cụ thể (<code>RoomRepository</code>, <code>VIPPricing</code>) cài đặt các phương thức khai báo trong <code>«interface»</code> (<code>IGenericRepository&lt;T&gt;</code>, <code>Pricing</code>). Bắt buộc phải là nét đứt.</td>
+                </tr>
+                <tr>
+                  <td><strong>Nét đứt + Mũi tên hở</strong> (<code>┈&gt;</code>)</td>
+                  <td>Dependency (<code>«use»</code>)</td>
+                  <td>Quan hệ phụ thuộc tạm thời giữa các tầng: Lớp A sử dụng hoặc gọi hàm của Lớp B (VD: <code>BookingController ..&gt; BookingService ..&gt; IGenericRepository&lt;T&gt;</code>).</td>
+                </tr>
+                <tr>
+                  <td><strong>Nét liền</strong> (<code>──</code> / <code>─&gt;</code>)</td>
+                  <td>Association / Directed Assoc</td>
+                  <td>Liên kết cấu trúc bền vững giữa các Entity (thường lưu dưới dạng tham chiếu hoặc khóa ngoại). Nét liền không mũi tên là liên kết 2 chiều; có mũi tên hở là điều hướng 1 chiều.</td>
+                </tr>
+                <tr>
+                  <td><strong>Hình thoi rỗng</strong> (<code>◇──</code>)</td>
+                  <td>Aggregation ("has-a" lỏng)</td>
+                  <td>Quan hệ Chứa - Thành phần nhưng <strong>vòng đời độc lập</strong>: Xóa đối tượng chứa (<code>Department</code>, <code>ShowtimeSubject</code>) thì đối tượng phần (<code>Professor</code>, <code>Notification</code>) vẫn tồn tại.</td>
+                </tr>
+                <tr>
+                  <td><strong>Hình thoi đặc đen</strong> (<code>◆──</code>)</td>
+                  <td>Composition ("owns-a" chặt)</td>
+                  <td>Quan hệ sở hữu <strong>sống chết cùng nhau</strong> (<em>cannot exist without parent</em>): Xóa <code>Reservation</code> / <code>University</code> thì mọi <code>Payment</code> / <code>Department</code> bên trong bị xóa theo. Hình thoi đen luôn gắn sát vào lớp Mẹ.</td>
+                </tr>
+                <tr>
+                  <td><strong>Nét đứt nối vào dây N-N</strong></td>
+                  <td>Association Class</td>
+                  <td>Dùng khi mối quan hệ <code>M - N</code> bản thân nó phát sinh thêm thuộc tính riêng (VD: <code>Student</code> học <code>Course</code> sinh ra điểm số <code>finalGrade</code> trong <code>GradeReport</code>).</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <h4>B. Sơ đồ mẫu Design-level Class Diagram (Đề FA26_Example - StayEase Homestay - Đủ 3 Cụm Chuẩn Barem 3.0/3.0đ)</h4>
@@ -696,6 +756,51 @@
             </svg>
           </div>
 
+          <h4>A2. Ý Nghĩa Chi Tiết Từng Ký Hiệu Trong Sequence Diagram</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Ký hiệu</th>
+                  <th>Tên gọi UML 2.5</th>
+                  <th>Ý nghĩa chi tiết &amp; Quy tắc chấm thi PE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Khung <code>sd [Tên]</code></strong></td>
+                  <td>Interaction Frame</td>
+                  <td>Bao bọc toàn bộ kịch bản tương tác của một Use Case cụ thể (VD: <code>sd StayEase Homestay Booking</code>).</td>
+                </tr>
+                <tr>
+                  <td><strong>Hộp chữ nhật + Đường dọc nét đứt</strong></td>
+                  <td>Lifeline &amp; Stereotype</td>
+                  <td>Thể hiện vòng đời của một đối tượng tham gia tương tác theo thời gian (từ trên xuống dưới). Bắt buộc xếp theo thứ tự phân tầng: <code>Actor</code> → <code>«boundary» :UI</code> → <code>«control» :Controller</code> → <code>«service» :Service</code> → <code>«repository» :Repo</code> → <code>«entity» :Entity</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Thanh chữ nhật đứng hẹp</strong></td>
+                  <td>Activation Bar (Execution Specification)</td>
+                  <td>Biểu diễn khoảng thời gian đối tượng đang giữ luồng điều khiển và thực thi một phương thức (từ lúc nhận message đến lúc trả reply).</td>
+                </tr>
+                <tr>
+                  <td><strong>Nét liền + Mũi tên đặc</strong> (<code>──▶</code>)</td>
+                  <td>Synchronous Message</td>
+                  <td>Lời gọi hàm đồng bộ: Bên gửi phải chờ bên nhận xử lý xong. Bắt buộc đánh số thứ tự (<code>1:</code>, <code>2:</code> hoặc <code>1.1:</code>) và ghi rõ tên hàm + tham số.</td>
+                </tr>
+                <tr>
+                  <td><strong>Nét đứt + Mũi tên hở</strong> (<code>◀┈</code>)</td>
+                  <td>Reply Message (Return)</td>
+                  <td>Trả kết quả về cho đối tượng đã gọi hàm trước đó (VD: <code>return roomStatus</code>). Phải vẽ bằng nét đứt; vẽ nét liền bị trừ <code>0.5đ</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Khung <code>alt</code> chia đường nét đứt</strong></td>
+                  <td>Alternative Combined Fragment</td>
+                  <td>Mô tả rẽ nhánh điều kiện (tương đương <code>if ... else</code>). Điều kiện bắt buộc nằm trong <code>[...]</code> ở ngăn trên, nhánh ngược lại ghi <code>[else: ...]</code> ở ngăn dưới. (Ngoài ra có <code>opt</code> cho <code>if</code> không có <code>else</code>, <code>loop</code> cho vòng lặp).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h4>B. Sơ đồ mẫu Sequence Diagram Phân Tầng (Đề StayEase Q2 - Đủ Actor, UI, Controller, Service, Repositories, Entity &amp; 2 Khung alt - 4.0 điểm)</h4>
           <div class="svg-board">
             <svg viewBox="0 0 1060 560" width="100%" height="560" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="10.5">
@@ -937,6 +1042,56 @@
               <text x="720" y="282" font-weight="bold">4. Swimlanes (Phân làn trách nhiệm)</text>
               <text x="720" y="298" fill="#c81e1e" font-size="10.5">Lỗi trừ 1.0đ: Không kẻ bảng chia cột Swimlanes!</text>
             </svg>
+          </div>
+
+          <h4>A2. Ý Nghĩa Chi Tiết Từng Ký Hiệu Trong Statechart &amp; Activity Diagram</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Sơ đồ</th>
+                  <th>Ký hiệu</th>
+                  <th>Ý nghĩa chi tiết &amp; Quy tắc bắt buộc trong bài thi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Statechart</strong></td>
+                  <td><strong>Chấm tròn đặc (<code>●</code>) &amp; Mắt bò (<code>◉</code>)</strong></td>
+                  <td><code>●</code> (Initial Pseudo-state) là điểm khởi tạo đối tượng (chỉ có 1). <code>◉</code> (Final State) là điểm kết thúc vòng đời (có thể nối từ <code>Completed</code>, <code>Cancelled</code>, <code>PaymentFailed</code>).</td>
+                </tr>
+                <tr>
+                  <td><strong>Statechart</strong></td>
+                  <td><strong>Hộp bo góc (State)</strong></td>
+                  <td>Biểu diễn một trạng thái ổn định mà đối tượng đang giữ (Tên bắt buộc là <strong>Tính từ / Phân từ</strong> như <code>Pending</code>, <code>Confirmed</code>, <code>Completed</code>). Có thể chứa 3 hành vi nội bộ: <code>entry /</code> (khi vừa vào), <code>do /</code> (trong lúc ở trạng thái), <code>exit /</code> (khi rời đi).</td>
+                </tr>
+                <tr>
+                  <td><strong>Statechart</strong></td>
+                  <td><strong>Mũi tên <code>event [guard] / action</code></strong></td>
+                  <td><strong>Transition:</strong> Sự chuyển đổi từ trạng thái này sang trạng thái khác khi xảy ra sự kiện <code>event</code> (bắt buộc ghi tên!), thỏa mãn điều kiện <code>[guard]</code>, và thực thi <code>action</code>. Đề PE yêu cầu <strong>&gt;= 6 transitions</strong>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Activity</strong></td>
+                  <td><strong>Các cột dọc (Swimlanes)</strong></td>
+                  <td><strong>Partition / Swimlane:</strong> Chia vùng trách nhiệm theo từng Actor hoặc Hệ thống (VD: <code>Host | StayEase System | Guest</code>). Hành động thuộc về ai thì đặt vào đúng cột của người đó.</td>
+                </tr>
+                <tr>
+                  <td><strong>Activity</strong></td>
+                  <td><strong>Hộp bo tròn 2 đầu (Action Node)</strong></td>
+                  <td>Biểu diễn một bước công việc/hành động cụ thể trong quy trình. Tên bắt buộc bắt đầu bằng <strong>Động từ + Tân ngữ</strong> (VD: <code>Inspect Room Condition</code>, <code>Calculate Damage Fee</code>).</td>
+                </tr>
+                <tr>
+                  <td><strong>Activity</strong></td>
+                  <td><strong>Hình thoi (<code>◇</code> Decision / Merge)</strong></td>
+                  <td><strong>Decision Node:</strong> 1 luồng vào, nhiều luồng ra có điều kiện <code>[Damage Found]</code> / <code>[No Damage]</code>. <strong>Merge Node:</strong> Nhiều luồng vào, 1 luồng ra để gộp nhánh trước khi đi tiếp.</td>
+                </tr>
+                <tr>
+                  <td><strong>Activity</strong></td>
+                  <td><strong>Thanh đen dày (Fork / Join Bar)</strong></td>
+                  <td><strong>Fork Bar:</strong> Tách 1 luồng thành nhiều nhánh chạy song song đồng thời (VD: cập nhật đồng thời <code>Reservation="Completed"</code> và <code>Room="Cleaning"</code>). <strong>Join Bar:</strong> Đồng bộ đợi tất cả nhánh song song xong mới đi tiếp ra <code>◉</code>.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <h4>B. Sơ đồ mẫu 1: Activity Diagram có Swimlanes (Đề StayEase Q3 - Check-out &amp; Inspection - 3.0 điểm - Luồng chuẩn không đè nét)</h4>
@@ -1244,6 +1399,46 @@
               <rect x="535" y="274" width="490" height="36" rx="6" fill="#e9f8db" stroke="#2f6800"/>
               <text x="545" y="296" fill="#2f6800" font-weight="bold">YÊU CẦU CÂU 1.3: Tách M-N thành Bảng Trung Gian + Ghi đủ PK, FK, Kiểu DL!</text>
             </svg>
+          </div>
+
+          <h4>A2. Ý Nghĩa Chi Tiết Từng Ký Hiệu Trong ERD &amp; Use Case Diagram</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Sơ đồ</th>
+                  <th>Ký hiệu</th>
+                  <th>Ý nghĩa chi tiết &amp; Lưu ý tránh mất điểm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Conceptual ERD (Chen)</strong></td>
+                  <td><strong>Chữ nhật / Elip gạch chân / Elip nét đứt / Hình thoi</strong></td>
+                  <td>Chữ nhật: <strong>Entity</strong> (thực thể dữ liệu). Elip thường: Attribute. Elip có <strong>chữ gạch chân</strong>: <strong>Key Attribute</strong> (thuộc tính định danh duy nhất). Elip nét đứt: <strong>Derived Attribute</strong> (tính toán từ cột khác). Hình thoi: <strong>Relationship</strong> (quan hệ <code>1-1</code>, <code>1-N</code>, <code>M-N</code>). Tuyệt đối không ghi <code>FK</code> và kiểu dữ liệu.</td>
+                </tr>
+                <tr>
+                  <td><strong>Logical ERD (Crow's Foot)</strong></td>
+                  <td><strong>Bảng 2 cột + Đầu dây <code>||</code>, <code>o|</code>, <code>|&lt;</code>, <code>o&lt;</code></strong></td>
+                  <td>Mỗi bảng ghi rõ <code>PK</code>, <code>FK</code> và kiểu dữ liệu (<code>INT</code>, <code>VARCHAR</code>, <code>DECIMAL</code>, <code>DATETIME</code>). Ký hiệu đầu dây gồm 2 ký tự (bên trong = tối thiểu, sát bảng = tối đa): <code>||</code> (bắt buộc đúng 1), <code>o|</code> (0 hoặc 1), <code>|&lt;</code> (1 hoặc nhiều), <code>o&lt;</code> (0 hoặc nhiều). Quan hệ <code>M-N</code> bắt buộc tách thành <strong>Bảng trung gian</strong>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Use Case</strong></td>
+                  <td><strong>Người que (Actor) &amp; Khung System Boundary</strong></td>
+                  <td><strong>Actor</strong> nằm NGOÀI khung chữ nhật System Boundary (người dùng ở bên trái, hệ thống ngoài <code>«system»</code> như <code>PaymentGateway</code> ở bên phải). Nối với Use Case bằng <strong>nét liền không mũi tên</strong>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Use Case</strong></td>
+                  <td><strong>Hình bầu dục (Use Case)</strong></td>
+                  <td>Tên phải là <strong>Động từ + Tân ngữ</strong> cụ thể (VD: <code>Reserve Room</code>, <code>Browse Movies</code>). Tránh dùng từ chung chung như <code>Manage Rooms</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Use Case</strong></td>
+                  <td><strong><code>«include»</code> vs <code>«extend»</code></strong></td>
+                  <td><strong><code>«include»</code> (bắt buộc):</strong> Nét đứt trỏ từ Use Case chính → sang Use Case phụ bắt buộc phải chạy kèm (<code>Reserve Homestay ..&gt; Pay Deposit</code>).<br><strong><code>«extend»</code> (tùy chọn):</strong> Nét đứt trỏ từ Use Case mở rộng → <strong>ngược về Use Case gốc</strong> (<code>Apply Voucher ..&gt; Reserve Homestay</code>).</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <h4>B. Sơ đồ mẫu 1: Conceptual ERD (Câu 1.2 - Chen's Notation - Giữ nguyên M-N, không FK, không kiểu dữ liệu)</h4>
